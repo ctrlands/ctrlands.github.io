@@ -16,7 +16,7 @@
 <meta property="og:description" content="安装环境前提：Node + Git hexo安装1. 使用npm安装hexo1npm install -g hexo-cli">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ctrlands.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-14T07:18:49.107Z">
+<meta property="og:updated_time" content="2019-06-14T08:44:20.978Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo + github page 搭建">
 <meta name="twitter:description" content="安装环境前提：Node + Git hexo安装1. 使用npm安装hexo1npm install -g hexo-cli">
@@ -140,10 +140,12 @@
     </div>
 </nav>
     
+    
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+                
+                    <div class="column is-12 has-order-2 column-main"><div class="card">
     
     <div class="card-content article ">
         
@@ -159,7 +161,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes 读完 (大约 272 个字)
+                    3 minutes 读完 (大约 400 个字)
                 </span>
                 
                 
@@ -181,15 +183,21 @@
 <h2 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h2><h3 id="1-使用npm安装hexo"><a href="#1-使用npm安装hexo" class="headerlink" title="1. 使用npm安装hexo"></a>1. 使用npm安装hexo</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
 <a id="more"></a>
-<p><img src="/images/HexoGithubPageBuild/hexo-init.jpg" alt="hexo init"></p>
+
 <h3 id="2-hexo初始化"><a href="#2-hexo初始化" class="headerlink" title="2. hexo初始化"></a>2. hexo初始化</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init folderName</span><br><span class="line">cd folderName</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
 
+<p><img src="/images/HexoGithubPageBuild/hexo-init.png" alt="hexo 初始化"></p>
 <h3 id="3-启动服务"><a href="#3-启动服务" class="headerlink" title="3. 启动服务"></a>3. 启动服务</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="4-配置git"><a href="#4-配置git" class="headerlink" title="4. 配置git"></a>4. 配置git</h3><p>_config.yml <br></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repository: https://github.com/ctrlands/ctrlands.github.io.git</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
+<p><img src="/images/HexoGithubPageBuild/hexo-server-cmd.png" alt="hexo 服务启动"><br>浏览器输入地址：localhost:4000查看<br><img src="/images/HexoGithubPageBuild/hexo-server-img.png" alt="hexo 服务启动"></p>
+<h3 id="4-配置git"><a href="#4-配置git" class="headerlink" title="4. 配置git"></a>4. 配置git</h3><p><strong><em>根目录/_config.yml</em></strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repository: https://github.com/ctrlands/ctrlands.github.io.git</span><br><span class="line">	branch: master</span><br><span class="line">	message: message</span><br></pre></td></tr></table></figure>
 
+<p>了解更多：<a href="https://hexo.io/zh-cn/docs/deployment" target="_blank" rel="noopener">hexo deploy</a></p>
+<h3 id="5-更换主题"><a href="#5-更换主题" class="headerlink" title="5. 更换主题"></a>5. 更换主题</h3><p>选择自己喜欢的主题下载，然后将主题文件放在 <strong><em>根目录/themes</em></strong> 文件下，默认主题(landspace)可删掉.<br>然后在 <strong><em>根目录/_config.yml</em></strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: hexo-theme-icarus</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/HexoGithubPageBuild/hexo-theme.png" alt="hexo 更换主题"><br>查看更多主题：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo theme</a></p>
 <h3 id="5-生成静态页面"><a href="#5-生成静态页面" class="headerlink" title="5. 生成静态页面"></a>5. 生成静态页面</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate( hexo g)</span><br></pre></td></tr></table></figure>
 
 <h3 id="6-部署"><a href="#6-部署" class="headerlink" title="6. 部署"></a>6. 部署</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy(hexo d)</span><br></pre></td></tr></table></figure>
@@ -197,7 +205,7 @@
 <p>提示提示：ERROR: Deployer not fonud git.<br>        执行命令安装：npm install hexo-deployer-git –save<br>        git添加ssh</p>
 <h3 id="7-域名解析"><a href="#7-域名解析" class="headerlink" title="7. 域名解析"></a>7. 域名解析</h3><p>在主题模板文件中的/source目录中添加CNAME文件,无任何后缀名，文件内容为域名(a.com)</p>
 <h2 id="域名解析绑定"><a href="#域名解析绑定" class="headerlink" title="域名解析绑定"></a>域名解析绑定</h2><p>域名提供商控制台页面添加域名解析记录：<br>        记录类型选CNAME<br>        记录值填username.github.io.</p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>hexo中的_config.yml为站点配置文件<br>    theme/themeName中的_config.yml为主题配置文件<br>    设置语言为中文：站点配置文件 language: zh-Hans<br>    若未生效，将主题配置文件language文件中的zh-CN.yml改为zh-Hans.yml<br>    hexo d –message “the info of commit”</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>hexo中的_config.yml为站点配置文件<br>    theme/themeName中的_config.yml为主题配置文件<br>    设置语言为中文：站点配置文件 language: zh-Hans<br>    若未生效，将主题配置文件language文件中的zh-CN.yml改为zh-Hans.yml<br>    hexo d -message “the info of commit”<br>    hexo d -m “the info of commit”</p>
 
         </div>
         
@@ -263,331 +271,6 @@
 </div>
 </div>
                 
-
-
-
-
-<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
-    
-        
-<div class="card widget">
-    <div class="card-content">
-        <nav class="level">
-            <div class="level-item has-text-centered">
-                <div>
-                    
-                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="ctrlands">
-                    
-                    
-                    <p class="is-size-4 is-block">
-                        ctrlands
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-block">
-                        Web前端开发
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
-                        <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>chongqing, china</span>
-                    </p>
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level is-mobile">
-            <div class="level-item has-text-centered is-marginless">
-                <div>
-                    <p class="heading">
-                        文章
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        1
-                    </p>
-                </div>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <div>
-                    <p class="heading">
-                        分类
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        1
-                    </p>
-                </div>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <div>
-                    <p class="heading">
-                        标签
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        0
-                    </p>
-                </div>
-            </div>
-        </nav>
-        <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://github.com/ctrlands" target="_blank">
-                关注我</a>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/ctrlands">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://facebook.com">
-                
-                <i class="fab fa-facebook"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com">
-                
-                <i class="fab fa-twitter"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Dribbble" href="https://dribbble.com">
-                
-                <i class="fab fa-dribbble"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
-    </div>
-</div>
-    
-        
-    
-        
-
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-        <h3 class="menu-label">
-            链接
-        </h3>
-        <ul class="menu-list">
-        
-            <li>
-                <a class="level is-mobile" href="https://hexo.io" target="_blank">
-                    <span class="level-left">
-                        <span class="level-item">Hexo</span>
-                    </span>
-                    <span class="level-right">
-                        <span class="level-item tag">hexo.io</span>
-                    </span>
-                </a>
-            </li>
-        
-            <li>
-                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank">
-                    <span class="level-left">
-                        <span class="level-item">PPOffice</span>
-                    </span>
-                    <span class="level-right">
-                        <span class="level-item tag">github.com</span>
-                    </span>
-                </a>
-            </li>
-        
-        </ul>
-        </div>
-    </div>
-</div>
-
-
-    
-        
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                分类
-            </h3>
-            <ul class="menu-list">
-            <li>
-        <a class="level is-marginless" href="/categories/hexo/">
-            <span class="level-start">
-                <span class="level-item">hexo</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-    
-        
-    
-    
-        <div class="column-right-shadow is-hidden-widescreen ">
-        
-            
-<div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            最新文章
-        </h3>
-        
-        <article class="media">
-            
-            <a href="/2019/06/13/hexo+githubPage搭建/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="hexo + github page 搭建">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-13T10:04:18.050Z">2019-06-13</time></div>
-                    <a href="/2019/06/13/hexo+githubPage搭建/" class="has-link-black-ter is-size-6">hexo + github page 搭建</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/hexo/">hexo</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-    </div>
-</div>
-
-        
-            <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-        <h3 class="menu-label">
-            归档
-        </h3>
-        <ul class="menu-list">
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/06/">
-                <span class="level-start">
-                    <span class="level-item">June 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        </ul>
-        </div>
-    </div>
-</div>
-        
-            <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                标签
-            </h3>
-            <div class="field is-grouped is-grouped-multiline">
-                
-            </div>
-        </div>
-    </div>
-</div>
-        
-        </div>
-    
-</div>
-
-                
-
-
-
-
-<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
-    
-        
-<div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            最新文章
-        </h3>
-        
-        <article class="media">
-            
-            <a href="/2019/06/13/hexo+githubPage搭建/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="hexo + github page 搭建">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-13T10:04:18.050Z">2019-06-13</time></div>
-                    <a href="/2019/06/13/hexo+githubPage搭建/" class="has-link-black-ter is-size-6">hexo + github page 搭建</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/hexo/">hexo</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-    </div>
-</div>
-
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-        <h3 class="menu-label">
-            归档
-        </h3>
-        <ul class="menu-list">
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/06/">
-                <span class="level-start">
-                    <span class="level-item">June 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        </ul>
-        </div>
-    </div>
-</div>
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                标签
-            </h3>
-            <div class="field is-grouped is-grouped-multiline">
-                
-            </div>
-        </div>
-    </div>
-</div>
-    
-    
-</div>
-
             </div>
         </div>
     </section>
