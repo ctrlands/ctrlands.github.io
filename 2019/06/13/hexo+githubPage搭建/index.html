@@ -7,19 +7,19 @@
 
 
 
-    <meta name="description" content="安装环境前提：Node + Git hexo安装1. 使用npm安装hexo1npm install -g hexo-cli">
+    <meta name="description" content="安装环境前提：Node + Git I. hexo安装1. 使用npm安装hexo1npm install -g hexo-cli">
 <meta name="keywords" content="ctrlands,miui主题,web前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo + github page 搭建">
 <meta property="og:url" content="http://ctrlands.github.io/2019/06/13/hexo+githubPage搭建/index.html">
 <meta property="og:site_name" content="ctrlands">
-<meta property="og:description" content="安装环境前提：Node + Git hexo安装1. 使用npm安装hexo1npm install -g hexo-cli">
+<meta property="og:description" content="安装环境前提：Node + Git I. hexo安装1. 使用npm安装hexo1npm install -g hexo-cli">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ctrlands.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-14T08:44:20.978Z">
+<meta property="og:updated_time" content="2019-06-14T09:38:29.275Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo + github page 搭建">
-<meta name="twitter:description" content="安装环境前提：Node + Git hexo安装1. 使用npm安装hexo1npm install -g hexo-cli">
+<meta name="twitter:description" content="安装环境前提：Node + Git I. hexo安装1. 使用npm安装hexo1npm install -g hexo-cli">
 <meta name="twitter:image" content="http://ctrlands.github.io/images/og_image.png">
 
 
@@ -161,7 +161,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 minutes 读完 (大约 400 个字)
+                    4 minutes 读完 (大约 556 个字)
                 </span>
                 
                 
@@ -180,7 +180,7 @@
         </h1>
         <div class="content">
             <p>安装环境前提：Node + Git</p>
-<h2 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h2><h3 id="1-使用npm安装hexo"><a href="#1-使用npm安装hexo" class="headerlink" title="1. 使用npm安装hexo"></a>1. 使用npm安装hexo</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h2 id="I-hexo安装"><a href="#I-hexo安装" class="headerlink" title="I. hexo安装"></a>I. hexo安装</h2><h3 id="1-使用npm安装hexo"><a href="#1-使用npm安装hexo" class="headerlink" title="1. 使用npm安装hexo"></a>1. 使用npm安装hexo</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
 <a id="more"></a>
 
@@ -189,23 +189,32 @@
 <p><img src="/images/HexoGithubPageBuild/hexo-init.png" alt="hexo 初始化"></p>
 <h3 id="3-启动服务"><a href="#3-启动服务" class="headerlink" title="3. 启动服务"></a>3. 启动服务</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/HexoGithubPageBuild/hexo-server-cmd.png" alt="hexo 服务启动"><br>浏览器输入地址：localhost:4000查看<br><img src="/images/HexoGithubPageBuild/hexo-server-img.png" alt="hexo 服务启动"></p>
-<h3 id="4-配置git"><a href="#4-配置git" class="headerlink" title="4. 配置git"></a>4. 配置git</h3><p><strong><em>根目录/_config.yml</em></strong></p>
+<p><img src="/images/HexoGithubPageBuild/hexo-server-cmd.png" alt="hexo 服务启动"><br>浏览器输入地址：localhost:4000查看.<br><img src="/images/HexoGithubPageBuild/hexo-server-img.png" alt="hexo 服务启动"></p>
+<h3 id="4-github-page"><a href="#4-github-page" class="headerlink" title="4. github page"></a>4. github page</h3><p>git上新建仓库, 项目名为： yourusername.github.io, 记住仓库的地址后面需要部署到这个仓库里面来.</p>
+<h3 id="5-配置git"><a href="#5-配置git" class="headerlink" title="5. 配置git"></a>5. 配置git</h3><p><strong><em>根目录/_config.yml</em></strong></p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repository: https://github.com/ctrlands/ctrlands.github.io.git</span><br><span class="line">	branch: master</span><br><span class="line">	message: message</span><br></pre></td></tr></table></figure>
 
 <p>了解更多：<a href="https://hexo.io/zh-cn/docs/deployment" target="_blank" rel="noopener">hexo deploy</a></p>
-<h3 id="5-更换主题"><a href="#5-更换主题" class="headerlink" title="5. 更换主题"></a>5. 更换主题</h3><p>选择自己喜欢的主题下载，然后将主题文件放在 <strong><em>根目录/themes</em></strong> 文件下，默认主题(landspace)可删掉.<br>然后在 <strong><em>根目录/_config.yml</em></strong></p>
+<h3 id="6-更换主题"><a href="#6-更换主题" class="headerlink" title="6. 更换主题"></a>6. 更换主题</h3><p>选择自己喜欢的主题下载，然后将主题文件放在 <strong><em>根目录/themes</em></strong> 文件下，默认主题(landspace)可删掉.<br>然后在 <strong><em>根目录/_config.yml</em></strong></p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: hexo-theme-icarus</span><br></pre></td></tr></table></figure>
 
 <p><img src="/images/HexoGithubPageBuild/hexo-theme.png" alt="hexo 更换主题"><br>查看更多主题：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo theme</a></p>
-<h3 id="5-生成静态页面"><a href="#5-生成静态页面" class="headerlink" title="5. 生成静态页面"></a>5. 生成静态页面</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate( hexo g)</span><br></pre></td></tr></table></figure>
+<h3 id="7-生成静态页面"><a href="#7-生成静态页面" class="headerlink" title="7. 生成静态页面"></a>7. 生成静态页面</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
 
-<h3 id="6-部署"><a href="#6-部署" class="headerlink" title="6. 部署"></a>6. 部署</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy(hexo d)</span><br></pre></td></tr></table></figure>
+<p>可简写为:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 
-<p>提示提示：ERROR: Deployer not fonud git.<br>        执行命令安装：npm install hexo-deployer-git –save<br>        git添加ssh</p>
-<h3 id="7-域名解析"><a href="#7-域名解析" class="headerlink" title="7. 域名解析"></a>7. 域名解析</h3><p>在主题模板文件中的/source目录中添加CNAME文件,无任何后缀名，文件内容为域名(a.com)</p>
-<h2 id="域名解析绑定"><a href="#域名解析绑定" class="headerlink" title="域名解析绑定"></a>域名解析绑定</h2><p>域名提供商控制台页面添加域名解析记录：<br>        记录类型选CNAME<br>        记录值填username.github.io.</p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>hexo中的_config.yml为站点配置文件<br>    theme/themeName中的_config.yml为主题配置文件<br>    设置语言为中文：站点配置文件 language: zh-Hans<br>    若未生效，将主题配置文件language文件中的zh-CN.yml改为zh-Hans.yml<br>    hexo d -message “the info of commit”<br>    hexo d -m “the info of commit”</p>
+<p><img src="/images/HexoGithubPageBuild/hexo-generate.png" alt="hexo generate"><br>生成的文件位于 <strong><em>根目录/Public</em></strong> 文件夹里面.</p>
+<h3 id="8-部署"><a href="#8-部署" class="headerlink" title="8. 部署"></a>8. 部署</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>可简写为:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/HexoGithubPageBuild/hexo-deploy.png" alt="hexo deploy"><br>若遇到提示：ERROR: Deployer not fonud git.<br>执行命令安装：<br><code>npm install hexo-deployer-git --save</code><br>安装成功后初次提交会输入用户名和密码, 若不想每次提交输入验证, 需添加ssh key, <a href="https://www.liaoxuefeng.com/wiki/896043488029600/896954117292416" target="_blank" rel="noopener">git添加ssh key</a></p>
+<h3 id="9-域名解析"><a href="#9-域名解析" class="headerlink" title="9. 域名解析"></a>9. 域名解析</h3><p>在 <strong><em>根目录/themes/your theme/source</em></strong> 根目录中添加CNAME文件,无任何后缀名，文件内容为你的域名(eg: <a href="http://www.ctrlands.com" target="_blank" rel="noopener">www.ctrlands.com</a>).</p>
+<h2 id="Ⅱ-域名解析绑定"><a href="#Ⅱ-域名解析绑定" class="headerlink" title="Ⅱ. 域名解析绑定"></a>Ⅱ. 域名解析绑定</h2><p>在域名提供商控制台页面添加域名解析记录：<br>        记录类型选CNAME<br>        记录值填username.github.io.<br><img src="/images/HexoGithubPageBuild/domain.png" alt="hexo deploy"></p>
+<h2 id="Ⅲ-其他"><a href="#Ⅲ-其他" class="headerlink" title="Ⅲ. 其他"></a>Ⅲ. 其他</h2><p>hexo中的 <strong><em>根目录/_config.yml</em></strong> 为站点<strong>配置文件</strong>.<br><br><strong><em>根目录/theme/downloadTheme</em></strong> 中的_config.yml为<strong>主题配置文件</strong>.<br><br>设置语言为中文：修改 站点配置文件 中的 language: zh-Hans,若未生效，将主题配置文件language文件中的zh-CN.yml改为zh-Hans.yml.<br><br>hexo deploy时添加自定义commit信息：<br>    <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d -message &quot;the info of commit&quot;</span><br></pre></td></tr></table></figure></p>
+<p>可简写为：<br>    <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d -m &quot;the info of commit&quot;</span><br></pre></td></tr></table></figure></p>
 
         </div>
         
