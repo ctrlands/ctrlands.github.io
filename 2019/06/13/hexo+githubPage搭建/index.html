@@ -2,23 +2,24 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>分类: hexo - ctrlands</title>
+<title>hexo + github page 搭建 - ctrlands</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="ctrlands,miui主题,web前端">
+    <meta name="description" content="安装环境前提：Node + Git hexo安装1. 使用npm安装hexo1npm install -g hexo-cli">
 <meta name="keywords" content="ctrlands,miui主题,web前端">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ctrlands">
-<meta property="og:url" content="http://ctrlands.github.io/categories/hexo/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo + github page 搭建">
+<meta property="og:url" content="http://ctrlands.github.io/2019/06/13/hexo+githubPage搭建/index.html">
 <meta property="og:site_name" content="ctrlands">
-<meta property="og:description" content="ctrlands,miui主题,web前端">
+<meta property="og:description" content="安装环境前提：Node + Git hexo安装1. 使用npm安装hexo1npm install -g hexo-cli">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ctrlands.github.io/images/og_image.png">
+<meta property="og:updated_time" content="2019-06-14T07:18:49.107Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ctrlands">
-<meta name="twitter:description" content="ctrlands,miui主题,web前端">
+<meta name="twitter:title" content="hexo + github page 搭建">
+<meta name="twitter:description" content="安装环境前提：Node + Git hexo安装1. 使用npm安装hexo1npm install -g hexo-cli">
 <meta name="twitter:image" content="http://ctrlands.github.io/images/og_image.png">
 
 
@@ -97,7 +98,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="ctrlands" height="28">
+                <img src="/images/logo.svg" alt="hexo + github page 搭建" height="28">
             
             </a>
         </div>
@@ -143,18 +144,6 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/categories">分类</a></li>
-            
-            <li class="is-active"><a href="#" aria-current="page">hexo</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-content article ">
         
@@ -174,27 +163,44 @@
                 </span>
                 
                 
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
             </div>
         </div>
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/13/hexo+githubPage搭建/">hexo + github page 搭建</a>
+                hexo + github page 搭建
             
         </h1>
         <div class="content">
             <p>安装环境前提：Node + Git</p>
 <h2 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h2><h3 id="1-使用npm安装hexo"><a href="#1-使用npm安装hexo" class="headerlink" title="1. 使用npm安装hexo"></a>1. 使用npm安装hexo</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+<p><img src="/images/HexoGithubPageBuild/hexo-init.jpg" alt="hexo init"></p>
+<h3 id="2-hexo初始化"><a href="#2-hexo初始化" class="headerlink" title="2. hexo初始化"></a>2. hexo初始化</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init folderName</span><br><span class="line">cd folderName</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-启动服务"><a href="#3-启动服务" class="headerlink" title="3. 启动服务"></a>3. 启动服务</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="4-配置git"><a href="#4-配置git" class="headerlink" title="4. 配置git"></a>4. 配置git</h3><p>_config.yml <br></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repository: https://github.com/ctrlands/ctrlands.github.io.git</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-生成静态页面"><a href="#5-生成静态页面" class="headerlink" title="5. 生成静态页面"></a>5. 生成静态页面</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate( hexo g)</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-部署"><a href="#6-部署" class="headerlink" title="6. 部署"></a>6. 部署</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy(hexo d)</span><br></pre></td></tr></table></figure>
+
+<p>提示提示：ERROR: Deployer not fonud git.<br>        执行命令安装：npm install hexo-deployer-git –save<br>        git添加ssh</p>
+<h3 id="7-域名解析"><a href="#7-域名解析" class="headerlink" title="7. 域名解析"></a>7. 域名解析</h3><p>在主题模板文件中的/source目录中添加CNAME文件,无任何后缀名，文件内容为域名(a.com)</p>
+<h2 id="域名解析绑定"><a href="#域名解析绑定" class="headerlink" title="域名解析绑定"></a>域名解析绑定</h2><p>域名提供商控制台页面添加域名解析记录：<br>        记录类型选CNAME<br>        记录值填username.github.io.</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>hexo中的_config.yml为站点配置文件<br>    theme/themeName中的_config.yml为主题配置文件<br>    设置语言为中文：站点配置文件 language: zh-Hans<br>    若未生效，将主题配置文件language文件中的zh-CN.yml改为zh-Hans.yml<br>    hexo d –message “the info of commit”</p>
+
         </div>
         
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/06/13/hexo+githubPage搭建/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
         
         
     </div>
@@ -202,11 +208,59 @@
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/alipay_donate.png" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/wechat_donate.png" alt="微信"></div>
+</a>
+
+                
+        </div>
+    </div>
+</div>
 
 
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: 'gB9OoFOvo9FBCjjQQLbTtL4q-gzGzoHsz',
+        app_key: 'Fs5e6rWDLLgXn0s0wtihKkl4',
+        placeholder: '请输入内容'
+    });
+</script>
+
+    </div>
+</div>
 </div>
                 
 
@@ -543,7 +597,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                     
-                    <img src="/images/logo.svg" alt="ctrlands" height="28">
+                    <img src="/images/logo.svg" alt="hexo + github page 搭建" height="28">
                     
                 </a>
                 <p class="is-size-7">
