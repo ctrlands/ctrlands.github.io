@@ -2,24 +2,24 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>如何在IIS服务器上部署Asp.Net项目 - ctrlands</title>
+<title>Kendo UI常见使用问题 - ctrlands</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="I. 项目发布使用工具及环境: Visual Studio 2017 + Windows Server 2008  项目解决方案右键选择”批生成“">
-<meta name="keywords" content="Asp.Net">
+    <meta name="description" content="I. gridgrid添加行checkbox及序号">
+<meta name="keywords" content="Kendo UI">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何在IIS服务器上部署Asp.Net项目">
-<meta property="og:url" content="http://ctrlands.github.io/2019/06/17/如何在IIS服务器上部署Asp.Net项目/index.html">
+<meta property="og:title" content="Kendo UI常见使用问题">
+<meta property="og:url" content="http://ctrlands.github.io/2019/06/17/KendoUI常见使用问题/index.html">
 <meta property="og:site_name" content="ctrlands">
-<meta property="og:description" content="I. 项目发布使用工具及环境: Visual Studio 2017 + Windows Server 2008  项目解决方案右键选择”批生成“">
+<meta property="og:description" content="I. gridgrid添加行checkbox及序号">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ctrlands.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-17T08:31:12.001Z">
+<meta property="og:updated_time" content="2019-06-18T09:48:20.888Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何在IIS服务器上部署Asp.Net项目">
-<meta name="twitter:description" content="I. 项目发布使用工具及环境: Visual Studio 2017 + Windows Server 2008  项目解决方案右键选择”批生成“">
+<meta name="twitter:title" content="Kendo UI常见使用问题">
+<meta name="twitter:description" content="I. gridgrid添加行checkbox及序号">
 <meta name="twitter:image" content="http://ctrlands.github.io/images/og_image.png">
 
 
@@ -98,7 +98,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="如何在IIS服务器上部署Asp.Net项目" height="28">
+                <img src="/images/logo.svg" alt="Kendo UI常见使用问题" height="28">
             
             </a>
         </div>
@@ -130,6 +130,10 @@
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -146,23 +150,30 @@
             <div class="columns">
                 
                     <div class="column is-12 has-order-2 column-main">
+    <aside id="article-toc" role="navigation" class="fixed">
+  <div id="article-toc-inner">
+      <strong class="sidebar-title">序：</strong>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#I-grid"><span class="toc-text">I. grid</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#grid添加行checkbox及序号"><span class="toc-text">grid添加行checkbox及序号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#grid自定义列模版"><span class="toc-text">grid自定义列模版</span></a></li></ol></li></ol>
+  </div>
+</aside>
+
 <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-17T01:14:45.000Z">2019-06-17</time>
+                <time class="level-item has-text-grey" datetime="2019-06-17T09:12:02.000Z">2019-06-17</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Asp-Net/">Asp.Net</a>
+                <a class="has-link-grey -link" href="/categories/Kendo-UI/">Kendo UI</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    3 minutes 读完 (大约 438 个字)
+                    a minute 读完 (大约 149 个字)
                 </span>
                 
                 
@@ -176,41 +187,16 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                如何在IIS服务器上部署Asp.Net项目
+                Kendo UI常见使用问题
             
         </h1>
         <div class="content">
-            <h2 id="I-项目发布"><a href="#I-项目发布" class="headerlink" title="I. 项目发布"></a>I. 项目发布</h2><p>使用工具及环境: Visual Studio 2017 + Windows Server 2008</p>
-<ol>
-<li><p>项目解决方案右键选择”<strong>批生成</strong>“</p>
-<a id="more"></a>
-<p><img src="/images/AspNetRealease/%E6%89%B9%E7%94%9F%E6%88%90.png" alt="批生成"></p>
-</li>
-<li><p>弹窗中”<strong>全选</strong>“后”<strong>重新生成</strong>“</p>
-</li>
-</ol>
-<p><img src="/images/AspNetRealease/%E5%85%A8%E9%80%89-%E9%87%8D%E6%96%B0%E7%94%9F%E6%88%90.png" alt="全选-重新生成"></p>
-<ol start="3">
-<li>找到项目启动文件, 右键”<strong>发布</strong>“</li>
-</ol>
-<p><img src="/images/AspNetRealease/%E5%8F%91%E5%B8%83.png" alt="发布"></p>
-<ol start="4">
-<li>启动-&gt;在新弹窗中选择”IIS、FTP发布”-&gt;创建配置文件-&gt;发布方法选择”文件系统”-&gt;选择发布文件存放的位置</li>
-</ol>
-<p><img src="/images/AspNetRealease/%E5%8F%91%E5%B8%83%E9%85%8D%E7%BD%AE.png" alt="IIS、FTP发布"></p>
-<p><img src="/images/AspNetRealease/%E5%8F%91%E5%B8%83%E9%85%8D%E7%BD%AE-1.png" alt="发布方法选择&quot;文件系统&quot;"></p>
-<p><img src="/images/AspNetRealease/%E5%8F%91%E5%B8%83%E9%85%8D%E7%BD%AE-2.png" alt="存放位置"></p>
-<p><img src="/images/AspNetRealease/%E5%8F%91%E5%B8%83%E9%85%8D%E7%BD%AE-3.png" alt="配置选择&quot;Release&quot;"></p>
-<ol start="5">
-<li>新界面点击”发布”</li>
-</ol>
-<p><img src="/images/AspNetRealease/%E5%8F%91%E5%B8%83%E9%85%8D%E7%BD%AE-4.png" alt="发布"></p>
-<h2 id="I-项目部署"><a href="#I-项目部署" class="headerlink" title="I. 项目部署"></a>I. 项目部署</h2><ol>
-<li>Win+R, 输入mstsc远程登陆服务器, 以Windows Server 2008为例, 填写服务器地址, 用户名Administrator(默认), 密码.</li>
-<li>服务器桌面, “我的电脑”右键”管理”-&gt;打开”服务器管理器”-&gt;”角色”-&gt;”添加角色”-&gt;下一步, 选择”Web服务器(IIS)”-&gt;下一步, 勾选”应用程序开发(Asp.Net, .NET扩展, ISAPI扩展, ISAPI筛选器), 常用HTTP功能(静态内容,默认文档,HTTP错误,HTTP重定向)”-&gt;下一步, “安装”-&gt;等待安装完成, 浏览器输入”127.0.0.1”查看是否安装成功.</li>
-<li>“开始”菜单-&gt;Internet信息服务(IIS)管理器-&gt;”网站”右键”添加网站”-&gt;填写”网站名称”, “物理路径”选择刚才发布文件的位置, 填写”端口”号(购买的服务器需要开放该端口)</li>
-</ol>
-<h2 id="Ⅲ-其他"><a href="#Ⅲ-其他" class="headerlink" title="Ⅲ. 其他"></a>Ⅲ. 其他</h2><p>SQL Server运行需要.Netframework和VS2015环境, SQL Server TCP端口1433可能未设置. 打开SQL Server配置管理器, SQLEXPRESS的协议-&gt;TCP/IP右键-&gt;IPALL-&gt;TCP端口1433</p>
+            <script type="text/javascript" src="/js/ctrlands_tool.js"></script>
+<h2 id="I-grid"><a href="#I-grid" class="headerlink" title="I. grid"></a>I. grid</h2><h4 id="grid添加行checkbox及序号"><a href="#grid添加行checkbox及序号" class="headerlink" title="grid添加行checkbox及序号"></a>grid添加行checkbox及序号</h4><a id="more"></a>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">@(Html.Kendo().Grid(Model)</span><br><span class="line">		.Name(&quot;GridName&quot;)</span><br><span class="line">		.Columns(columns =&gt;</span><br><span class="line">		&#123;</span><br><span class="line">			columns.Select().Width(30).HtmlAttributes(new &#123; @class = &quot;select-checkbox&quot; &#125;);</span><br><span class="line">			columns.Template(@&lt;text&gt;&lt;/text&gt;).ClientTemplate(&quot;&lt;span class=&apos;row-number&apos;&gt;&lt;/span&gt;&quot;).Title(&quot;序号&quot;).Width(55);</span><br><span class="line">		&#125;)</span><br><span class="line">		.Events(events =&gt;</span><br><span class="line">		&#123;</span><br><span class="line">			events.DataBound(&quot;onDataGridBound&quot;);</span><br><span class="line">		&#125;)</span><br><span class="line">)</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    // grid 编号</span><br><span class="line">    function onDataGridBound() &#123;</span><br><span class="line">        var $grid = $(&quot;#GridName&quot;).data(&quot;kendoGrid&quot;);</span><br><span class="line">        if ($grid) &#123;</span><br><span class="line">            var rows = $grid.items();</span><br><span class="line">            //连续编号</span><br><span class="line">            $(rows).each(function () &#123;</span><br><span class="line">                var index = $(this).index() + 1 + ($grid.dataSource.pageSize() * ($grid.dataSource.page() - 1));</span><br><span class="line">                var rowLabel = $(this).find(&quot;.row-number&quot;);</span><br><span class="line">                $(rowLabel).text(index);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="grid自定义列模版"><a href="#grid自定义列模版" class="headerlink" title="grid自定义列模版"></a>grid自定义列模版</h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">columns.Bound(m =&gt; m.StateStr).Title(&quot;状态&quot;).Width(100).ClientTemplate(&quot;#= setTemplate(data) #&quot;);</span><br><span class="line">columns.Bound(p =&gt; p.Progress).ClientTemplate(&quot;#= svgCircle(Progress) #&quot;).Width(120);</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">	function setTemplate(item)&#123;</span><br><span class="line">	// item.StateStr  item.xxx 这里可以进行计算</span><br><span class="line">	return &quot;&apos;&lt;span&gt;&apos;+item.StateStr+&apos;&lt;/span&gt;&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	// gird添加圆环进度条(svg)fromat</span><br><span class="line">	function svgCircle(val) &#123;</span><br><span class="line">	    var setCircleVal = Math.floor(2 * Math.PI * 15) * (val/100);</span><br><span class="line">	    return &quot;&lt;div style=&apos;text-align: center;&apos;&gt;&quot; +</span><br><span class="line">	        &quot;&lt;div class=&apos;header_circle_text&apos;&gt;&quot; +</span><br><span class="line">	        &quot;&lt;span&gt;&quot; + val + &quot;%&lt;/span&gt;&quot; +</span><br><span class="line">	        &quot;&lt;/div&gt;&quot; +</span><br><span class="line">	        &quot;&lt;svg xmlns=&apos;http://www.w3.org/200/svg&apos; style=&apos;width:50px;height:50px;position:absolute;margin-left:-25px;margin-top:-35px;&apos;&gt;&quot; +</span><br><span class="line">	        &quot;&lt;circle cx=&apos;25&apos; cy=&apos;25&apos; r=&apos;15&apos; fill=&apos;none&apos; stroke=&apos;rgb(233,233,233)&apos; stroke-width=&apos;2&apos; stroke-linecap=&apos;round&apos; /&gt;&quot; +</span><br><span class="line">	        &quot;&lt;circle class=&apos;J_demo3&apos; cx=&apos;25&apos; cy=&apos;25&apos; r=&apos;15&apos; fill=&apos;none&apos; stroke=&apos;rgb(70,128,254)&apos; stroke-width=&apos;2&apos; stroke-dasharray=&apos;&quot; + setCircleVal +&quot;,10000&apos; /&gt;&quot; +</span><br><span class="line">	        &quot;&lt;/svg&gt;&quot; +</span><br><span class="line">	        &quot;&lt;/div&gt;&quot;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
 
         </div>
         
@@ -218,7 +204,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/Asp-Net/">Asp.Net</a>
+                    <a class="has-link-grey -link" href="/tags/Kendo-UI/">Kendo UI</a>
                 </div>
             </div>
         </div>
@@ -264,17 +250,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/06/17/KendoUI常见使用问题/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Kendo UI常见使用问题</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/13/hexo+githubPage搭建/">
-                <span class="level-item">hexo + github page 搭建</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/17/如何在IIS服务器上部署Asp.Net项目/">
+                <span class="level-item">如何在IIS服务器上部署Asp.Net项目</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -286,7 +265,7 @@
 <!-- <aside id="article-toc" role="navigation" class="fixed">
   <div id="article-toc-inner">
       <strong class="sidebar-title">序：</strong>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#I-项目发布"><span class="toc-text">I. 项目发布</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#I-项目部署"><span class="toc-text">I. 项目部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ⅲ-其他"><span class="toc-text">Ⅲ. 其他</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#I-grid"><span class="toc-text">I. grid</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#grid添加行checkbox及序号"><span class="toc-text">grid添加行checkbox及序号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#grid自定义列模版"><span class="toc-text">grid自定义列模版</span></a></li></ol></li></ol>
   </div>
 </aside> -->
 
@@ -323,7 +302,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                     
-                    <img src="/images/logo.svg" alt="如何在IIS服务器上部署Asp.Net项目" height="28">
+                    <img src="/images/logo.svg" alt="Kendo UI常见使用问题" height="28">
                     
                 </a>
                 <p class="is-size-7">

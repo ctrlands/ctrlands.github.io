@@ -495,3 +495,53 @@ figure.highlight:hover .copy {
 .gist .file {
   all: initial;
 }
+/* ---------------------------------
+ *        article toc 2019.6.18
+ * --------------------------------- */
+#article-toc-inner:after,
+#article-toc-inner:before,
+.inner:after,
+.inner:before {
+  content: "";
+  display: table;
+}
+#article-toc-inner:after,
+.inner:after {
+  clear: both;
+}
+#article-toc {
+  display: none;
+  float: right;
+  width: 25%;
+  margin-right: -220px;
+  opacity: 0.8;
+}
+@media screen and (min-width: 1920px) {
+  #article-toc {
+    display: block;
+  }
+}
+#article-toc.fixed {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 220px;
+  padding-top: 55px;
+}
+.fixed #article-toc-inner {
+  position: fixed;
+  width: 220px;
+  height: calc(100% - 104px);
+  top: 100px;
+  bottom: 0;
+  right: 50px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05), 0 0 1px rgba(0,0,0,0.1);
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+}
+#article-toc-inner ol {
+  margin-left: 16px;
+  list-style: none;
+  font-size: 1em;
+}
