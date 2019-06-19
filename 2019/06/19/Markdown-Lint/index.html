@@ -2,24 +2,24 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>hexo + github page 搭建 - ctrlands</title>
+<title>Markdown Lint - ctrlands</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="安装环境前提：Node + Git I. hexo安装1. 使用npm安装hexo1npm install -g hexo-cli">
-<meta name="keywords" content="ctrlands,miui主题,web前端">
+    <meta name="description" content="Markdown文档规范运行环境：Visual Studio Code + markdownlink插件以该markdownlink插件为标准, 例举自己编写md文档时出现的不规范行为.新建markdownlint自定义配置文件：.markdownlink.json">
+<meta name="keywords" content="Markdown Lint">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo + github page 搭建">
-<meta property="og:url" content="http://ctrlands.github.io/2019/06/13/hexo+githubPage搭建/index.html">
+<meta property="og:title" content="Markdown Lint">
+<meta property="og:url" content="http://ctrlands.github.io/2019/06/19/Markdown-Lint/index.html">
 <meta property="og:site_name" content="ctrlands">
-<meta property="og:description" content="安装环境前提：Node + Git I. hexo安装1. 使用npm安装hexo1npm install -g hexo-cli">
+<meta property="og:description" content="Markdown文档规范运行环境：Visual Studio Code + markdownlink插件以该markdownlink插件为标准, 例举自己编写md文档时出现的不规范行为.新建markdownlint自定义配置文件：.markdownlink.json">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ctrlands.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-19T03:04:54.448Z">
+<meta property="og:updated_time" content="2019-06-19T09:05:11.856Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo + github page 搭建">
-<meta name="twitter:description" content="安装环境前提：Node + Git I. hexo安装1. 使用npm安装hexo1npm install -g hexo-cli">
+<meta name="twitter:title" content="Markdown Lint">
+<meta name="twitter:description" content="Markdown文档规范运行环境：Visual Studio Code + markdownlink插件以该markdownlink插件为标准, 例举自己编写md文档时出现的不规范行为.新建markdownlint自定义配置文件：.markdownlink.json">
 <meta name="twitter:image" content="http://ctrlands.github.io/images/og_image.png">
 
 
@@ -98,7 +98,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="hexo + github page 搭建" height="28">
+                <img src="/images/logo.svg" alt="Markdown Lint" height="28">
             
             </a>
         </div>
@@ -130,6 +130,10 @@
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -146,23 +150,30 @@
             <div class="columns">
                 
                     <div class="column is-12 has-order-2 column-main">
+    <aside id="article-toc" role="navigation" class="fixed">
+  <div id="article-toc-inner">
+      <strong class="sidebar-title">序：</strong>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#MD001"><span class="toc-text">MD001</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD010"><span class="toc-text">MD010</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD013"><span class="toc-text">MD013</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD022"><span class="toc-text">MD022</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD030"><span class="toc-text">MD030</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD031"><span class="toc-text">MD031</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD033"><span class="toc-text">MD033</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD047"><span class="toc-text">MD047</span></a></li></ol>
+  </div>
+</aside>
+
 <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-13T10:04:18.050Z">2019-06-13</time>
+                <time class="level-item has-text-grey" datetime="2019-06-19T01:49:36.000Z">2019-06-19</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/hexo/">hexo</a>
+                <a class="has-link-grey -link" href="/categories/Lint/">Lint</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    4 minutes 读完 (大约 566 个字)
+                    2 minutes 读完 (大约 241 个字)
                 </span>
                 
                 
@@ -176,51 +187,41 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                hexo + github page 搭建
+                Markdown Lint
             
         </h1>
         <div class="content">
-            <p>安装环境前提：Node + Git</p>
-<h2 id="I-hexo安装"><a href="#I-hexo安装" class="headerlink" title="I. hexo安装"></a>I. hexo安装</h2><h3 id="1-使用npm安装hexo"><a href="#1-使用npm安装hexo" class="headerlink" title="1. 使用npm安装hexo"></a>1. 使用npm安装hexo</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+            <script type="text/javascript" src="/js/ctrlands_tool.js"></script>
 
+<p>Markdown文档规范<br>运行环境：Visual Studio Code + <a href="https://github.com/DavidAnson/vscode-markdownlint" target="_blank" rel="noopener">markdownlink插件</a><br>以该markdownlink插件为标准, 例举自己编写md文档时出现的不规范行为.<br>新建markdownlint自定义配置文件：.markdownlink.json</p>
 <a id="more"></a>
 
-<h3 id="2-hexo初始化"><a href="#2-hexo初始化" class="headerlink" title="2. hexo初始化"></a>2. hexo初始化</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init folderName</span><br><span class="line"><span class="hljs-built_in">cd</span> folderName</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<h3 id="MD001"><a href="#MD001" class="headerlink" title="MD001"></a>MD001</h3><p>MD001-Heading levels should only increment by one level at a time(标题级别默认只能逐级增加)</p>
+<h3 id="MD010"><a href="#MD010" class="headerlink" title="MD010"></a>MD010</h3><p>MD010-Hard Tabs(默认tab与space不允许混用)<br>修改.markdownlink.json, 添加</p>
+<figure class="highlight json hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="hljs-attr">"MD010"</span>: <span class="hljs-literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/HexoGithubPageBuild/hexo-init.png" alt="hexo 初始化"></p>
-<h3 id="3-启动服务"><a href="#3-启动服务" class="headerlink" title="3. 启动服务"></a>3. 启动服务</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="MD013"><a href="#MD013" class="headerlink" title="MD013"></a>MD013</h3><p>MD013-Line length(默认不超过80)<br>修改.markdownlink.json, 添加</p>
+<figure class="highlight json hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="hljs-attr">"MD013"</span>: <span class="hljs-literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/HexoGithubPageBuild/hexo-server-cmd.png" alt="hexo 服务启动"><br>浏览器输入地址：localhost:4000查看.<br><img src="/images/HexoGithubPageBuild/hexo-server-img.png" alt="hexo 服务启动"></p>
-<h3 id="4-github-page"><a href="#4-github-page" class="headerlink" title="4. github page"></a>4. github page</h3><p>git上新建仓库, 项目名为： yourusername.github.io, 记住仓库的地址后面需要部署到这个仓库里面来.</p>
-<h3 id="5-配置git"><a href="#5-配置git" class="headerlink" title="5. 配置git"></a>5. 配置git</h3><p><strong><em>根目录/_config.yml</em></strong></p>
-<figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repository: https://github.com/ctrlands/ctrlands.github.io.git</span><br><span class="line">    branch: master</span><br><span class="line">    message: message</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="MD022"><a href="#MD022" class="headerlink" title="MD022"></a>MD022</h3><p>MD022-Headings should be surrounded by blank lines(标题前后应换行)</p>
+<figure class="highlight markdown hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-section">## Title</span></span><br><span class="line"></span><br><span class="line">Some Text...</span><br></pre></td></tr></table></figure>
 
-<p>了解更多：<a href="https://hexo.io/zh-cn/docs/deployment" target="_blank" rel="noopener">hexo deploy</a></p>
-<h3 id="6-更换主题"><a href="#6-更换主题" class="headerlink" title="6. 更换主题"></a>6. 更换主题</h3><p>选择自己喜欢的主题下载，然后将主题文件放在 <strong><em>根目录/themes</em></strong> 文件下，默认主题(landspace)可删掉.<br>然后在 <strong><em>根目录/_config.yml</em></strong></p>
-<figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  theme: hexo-theme-icarus</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="MD030"><a href="#MD030" class="headerlink" title="MD030"></a>MD030</h3><p>MD030-Spaces after list markers(列表标记(例如’ -‘，’ *’，’ +’或’ 1.’)与列表项文本之间的空格数, 默认为1)</p>
+<h3 id="MD031"><a href="#MD031" class="headerlink" title="MD031"></a>MD031</h3><p>MD031-Fenced code blocks should be surrounded by blank lines(代码部分前后换行)</p>
+<h3 id="MD033"><a href="#MD033" class="headerlink" title="MD033"></a>MD033</h3><p>MD033-Inline HTML(默认: 标记时不允许使用原始HTML)<br>修改.markdownlink.json, 添加</p>
+<figure class="highlight json hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="hljs-attr">"MD033"</span>: <span class="hljs-literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/HexoGithubPageBuild/hexo-theme.png" alt="hexo 更换主题"><br>查看更多主题：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo theme</a></p>
-<h3 id="7-生成静态页面"><a href="#7-生成静态页面" class="headerlink" title="7. 生成静态页面"></a>7. 生成静态页面</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="MD047"><a href="#MD047" class="headerlink" title="MD047"></a>MD047</h3><p>MD047-Files should end with a single newline character(文档结束处空一行)</p>
 
-<p>可简写为:</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/HexoGithubPageBuild/hexo-generate.png" alt="hexo generate"><br>生成的文件位于 <strong><em>根目录/Public</em></strong> 文件夹里面.</p>
-<h3 id="8-部署"><a href="#8-部署" class="headerlink" title="8. 部署"></a>8. 部署</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>可简写为:</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/HexoGithubPageBuild/hexo-deploy.png" alt="hexo deploy"><br>若遇到提示：ERROR: Deployer not fonud git.<br>执行命令安装：<br><code>npm install hexo-deployer-git --save</code><br>安装成功后初次提交会输入用户名和密码, 若不想每次提交输入验证, 需添加ssh key, <a href="https://www.liaoxuefeng.com/wiki/896043488029600/896954117292416" target="_blank" rel="noopener">git添加ssh key</a></p>
-<h3 id="9-域名解析"><a href="#9-域名解析" class="headerlink" title="9. 域名解析"></a>9. 域名解析</h3><p>在 <strong><em>根目录/themes/your theme/source</em></strong> 根目录中添加CNAME文件,无任何后缀名，文件内容为你的域名(eg: <a href="http://www.ctrlands.com" target="_blank" rel="noopener">www.ctrlands.com</a>).</p>
-<h2 id="Ⅱ-域名解析绑定"><a href="#Ⅱ-域名解析绑定" class="headerlink" title="Ⅱ. 域名解析绑定"></a>Ⅱ. 域名解析绑定</h2><p>在域名提供商控制台页面添加域名解析记录：<br>        记录类型选CNAME<br>        记录值填username.github.io.<br><img src="/images/HexoGithubPageBuild/domain.png" alt="hexo deploy"></p>
-<h2 id="Ⅲ-其他"><a href="#Ⅲ-其他" class="headerlink" title="Ⅲ. 其他"></a>Ⅲ. 其他</h2><p>hexo中的 <strong><em>根目录/_config.yml</em></strong> 为站点<strong>配置文件</strong>.<br><br><strong><em>根目录/theme/downloadTheme</em></strong> 中的_config.yml为<strong>主题配置文件</strong>.<br><br>设置语言为中文：修改 站点配置文件 中的 language: zh-Hans,若未生效，将主题配置文件language文件中的zh-CN.yml改为zh-Hans.yml.<br><br>hexo deploy时添加自定义commit信息：</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d -message <span class="hljs-string">"the info of commit"</span></span><br></pre></td></tr></table></figure>
-
-<p>可简写为：</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d -m <span class="hljs-string">"the info of commit"</span></span><br></pre></td></tr></table></figure>
-
-
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Markdown-Lint/">Markdown Lint</a>
+                </div>
+            </div>
         </div>
         
         
@@ -264,13 +265,13 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/06/17/如何在IIS服务器上部署Asp.Net项目/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">如何在IIS服务器上部署Asp.Net项目</span>
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/17/KendoUI常见使用问题/">
+                <span class="level-item">Kendo UI常见使用问题</span>
+                <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
-        
         
     </div>
 </div>
@@ -279,7 +280,7 @@
 <!-- <aside id="article-toc" role="navigation" class="fixed">
   <div id="article-toc-inner">
       <strong class="sidebar-title">序：</strong>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#I-hexo安装"><span class="toc-text">I. hexo安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-使用npm安装hexo"><span class="toc-text">1. 使用npm安装hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-hexo初始化"><span class="toc-text">2. hexo初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-启动服务"><span class="toc-text">3. 启动服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-github-page"><span class="toc-text">4. github page</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-配置git"><span class="toc-text">5. 配置git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-更换主题"><span class="toc-text">6. 更换主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-生成静态页面"><span class="toc-text">7. 生成静态页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-部署"><span class="toc-text">8. 部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-域名解析"><span class="toc-text">9. 域名解析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ⅱ-域名解析绑定"><span class="toc-text">Ⅱ. 域名解析绑定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ⅲ-其他"><span class="toc-text">Ⅲ. 其他</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#MD001"><span class="toc-text">MD001</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD010"><span class="toc-text">MD010</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD013"><span class="toc-text">MD013</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD022"><span class="toc-text">MD022</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD030"><span class="toc-text">MD030</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD031"><span class="toc-text">MD031</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD033"><span class="toc-text">MD033</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD047"><span class="toc-text">MD047</span></a></li></ol>
   </div>
 </aside> -->
 
@@ -316,7 +317,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                     
-                    <img src="/images/logo.svg" alt="hexo + github page 搭建" height="28">
+                    <img src="/images/logo.svg" alt="Markdown Lint" height="28">
                     
                 </a>
                 <p class="is-size-7">

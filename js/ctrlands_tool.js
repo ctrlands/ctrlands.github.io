@@ -1,63 +1,63 @@
-var scrollFunc = function (e) {
-  e = e || window.event;
-  if (e.wheelDelta) {
-    if (e.wheelDelta > 0) {
-      var odom = document.getElementById("article-toc-inner");
-      var scrollTop = window.pageYOffset //用于FF
-      || document.documentElement.scrollTop
-      || document.body.scrollTop
-      || 0;
-      if (scrollTop <= 100) {
-        odom.style.top = "100px";
-      } else {
-        odom.style.top = "10px";
-      }
-    }
-    if (e.wheelDelta < 0) {
-      var odom = document.getElementById("article-toc-inner");
-      var scrollTop = window.pageYOffset //用于FF
-      || document.documentElement.scrollTop
-      || document.body.scrollTop
-      || 0;
-      if (scrollTop >= 0) {
-        odom.style.top = "10px";
-      } else {
-        odom.style.top = "100px";
-      }
-    }
-  } else if (e.detail) {
-    if (e.detail > 0) {
-      var odom = document.getElementById("article-toc-inner");
-      var scrollTop = window.pageYOffset //用于FF
-      || document.documentElement.scrollTop
-      || document.body.scrollTop
-      || 0;
-      if (scrollTop <= 100) {
-        odom.style.top = "100px";
-      } else {
-        odom.style.top = "10px";
-      }
-    }
-    if (e.detail < 0) {
-      var odom = document.getElementById("article-toc-inner");
-      var scrollTop = window.pageYOffset //用于FF
-      || document.documentElement.scrollTop
-      || document.body.scrollTop
-      || 0;
-      if (scrollTop >= 0) {
-        odom.style.top = "10px";
-      } else {
-        odom.style.top = "100px";
-      }
-    }
-  }
-}
+// var scrollFunc = function (e) {
+//   e = e || window.event;
+//   if (e.wheelDelta) {
+//     if (e.wheelDelta > 0) {
+//       var odom = document.getElementById("article-toc-inner");
+//       var scrollTop = window.pageYOffset //用于FF
+//       || document.documentElement.scrollTop
+//       || document.body.scrollTop
+//       || 0;
+//       if (scrollTop <= 100) {
+//         odom.style.top = "100px";
+//       } else {
+//         odom.style.top = "10px";
+//       }
+//     }
+//     if (e.wheelDelta < 0) {
+//       var odom = document.getElementById("article-toc-inner");
+//       var scrollTop = window.pageYOffset //用于FF
+//       || document.documentElement.scrollTop
+//       || document.body.scrollTop
+//       || 0;
+//       if (scrollTop >= 0) {
+//         odom.style.top = "10px";
+//       } else {
+//         odom.style.top = "100px";
+//       }
+//     }
+//   } else if (e.detail) {
+//     if (e.detail > 0) {
+//       var odom = document.getElementById("article-toc-inner");
+//       var scrollTop = window.pageYOffset //用于FF
+//       || document.documentElement.scrollTop
+//       || document.body.scrollTop
+//       || 0;
+//       if (scrollTop <= 100) {
+//         odom.style.top = "100px";
+//       } else {
+//         odom.style.top = "10px";
+//       }
+//     }
+//     if (e.detail < 0) {
+//       var odom = document.getElementById("article-toc-inner");
+//       var scrollTop = window.pageYOffset //用于FF
+//       || document.documentElement.scrollTop
+//       || document.body.scrollTop
+//       || 0;
+//       if (scrollTop >= 0) {
+//         odom.style.top = "10px";
+//       } else {
+//         odom.style.top = "100px";
+//       }
+//     }
+//   }
+// }
 
-if (document.addEventListener) {
-  document.addEventListener("DOMMouseScroll", scrollFunc, false);
-}
+// if (document.addEventListener) {
+//   document.addEventListener("DOMMouseScroll", scrollFunc, false);
+// }
 
-window.onmousewheel = document.onmousewheel = scrollFunc;
+// window.onmousewheel = document.onmousewheel = scrollFunc;
 
 
 function getScrollTop(){
@@ -94,9 +94,16 @@ function getScrollTop(){
   }
   window.onscroll = function(){
     var odom = document.getElementById("article-toc-inner");
-　　if(getScrollTop() + getWindowHeight() + 193 >= getScrollHeight()){
-       odom.style.height = "calc(100% - 244px)";
-　　} else {
-       odom.style.height = "calc(100% - 104px)";
+    if (odom) {
+      if (getScrollTop() >= 100) {
+        odom.style.top = "10px";
+      } else {
+        odom.style.top = "100px";
+      }
+      if(getScrollTop() + getWindowHeight() + 123 >= getScrollHeight()) {
+        odom.style.height = "calc(100% - 244px)";
+      } else {
+        odom.style.height = "calc(100% - 104px)";
+      }
     }
   };

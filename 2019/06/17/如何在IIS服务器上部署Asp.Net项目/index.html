@@ -16,7 +16,7 @@
 <meta property="og:description" content="I. 项目发布使用工具及环境: Visual Studio 2017 + Windows Server 2008  项目解决方案右键选择”批生成“">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ctrlands.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-17T08:31:12.001Z">
+<meta property="og:updated_time" content="2019-06-19T02:32:26.205Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何在IIS服务器上部署Asp.Net项目">
 <meta name="twitter:description" content="I. 项目发布使用工具及环境: Visual Studio 2017 + Windows Server 2008  项目解决方案右键选择”批生成“">
@@ -182,29 +182,13 @@
         <div class="content">
             <h2 id="I-项目发布"><a href="#I-项目发布" class="headerlink" title="I. 项目发布"></a>I. 项目发布</h2><p>使用工具及环境: Visual Studio 2017 + Windows Server 2008</p>
 <ol>
-<li><p>项目解决方案右键选择”<strong>批生成</strong>“</p>
-<a id="more"></a>
-<p><img src="/images/AspNetRealease/%E6%89%B9%E7%94%9F%E6%88%90.png" alt="批生成"></p>
-</li>
-<li><p>弹窗中”<strong>全选</strong>“后”<strong>重新生成</strong>“</p>
-</li>
+<li>项目解决方案右键选择”<strong>批生成</strong>“<br><a id="more"></a>
+<img src="/images/AspNetRealease/%E6%89%B9%E7%94%9F%E6%88%90.png" alt="批生成"><br></li>
+<li>弹窗中”<strong>全选</strong>“后”<strong>重新生成</strong>“<br><br><img src="/images/AspNetRealease/%E5%85%A8%E9%80%89-%E9%87%8D%E6%96%B0%E7%94%9F%E6%88%90.png" alt="全选-重新生成"><br></li>
+<li>找到项目启动文件, 右键”<strong>发布</strong>“<br><br><img src="/images/AspNetRealease/%E5%8F%91%E5%B8%83.png" alt="发布"><br></li>
+<li>启动-&gt;在新弹窗中选择”IIS、FTP发布”-&gt;创建配置文件-&gt;发布方法选择”文件系统”-&gt;选择发布文件存放的位置<br><br><img src="/images/AspNetRealease/%E5%8F%91%E5%B8%83%E9%85%8D%E7%BD%AE.png" alt="IIS、FTP发布"><br><br><img src="/images/AspNetRealease/%E5%8F%91%E5%B8%83%E9%85%8D%E7%BD%AE-1.png" alt="发布方法选择&quot;文件系统&quot;"><br><br><img src="/images/AspNetRealease/%E5%8F%91%E5%B8%83%E9%85%8D%E7%BD%AE-2.png" alt="存放位置"><br><br><img src="/images/AspNetRealease/%E5%8F%91%E5%B8%83%E9%85%8D%E7%BD%AE-3.png" alt="配置选择&quot;Release&quot;"><br></li>
+<li>新界面点击”发布”<br><br><img src="/images/AspNetRealease/%E5%8F%91%E5%B8%83%E9%85%8D%E7%BD%AE-4.png" alt="发布"></li>
 </ol>
-<p><img src="/images/AspNetRealease/%E5%85%A8%E9%80%89-%E9%87%8D%E6%96%B0%E7%94%9F%E6%88%90.png" alt="全选-重新生成"></p>
-<ol start="3">
-<li>找到项目启动文件, 右键”<strong>发布</strong>“</li>
-</ol>
-<p><img src="/images/AspNetRealease/%E5%8F%91%E5%B8%83.png" alt="发布"></p>
-<ol start="4">
-<li>启动-&gt;在新弹窗中选择”IIS、FTP发布”-&gt;创建配置文件-&gt;发布方法选择”文件系统”-&gt;选择发布文件存放的位置</li>
-</ol>
-<p><img src="/images/AspNetRealease/%E5%8F%91%E5%B8%83%E9%85%8D%E7%BD%AE.png" alt="IIS、FTP发布"></p>
-<p><img src="/images/AspNetRealease/%E5%8F%91%E5%B8%83%E9%85%8D%E7%BD%AE-1.png" alt="发布方法选择&quot;文件系统&quot;"></p>
-<p><img src="/images/AspNetRealease/%E5%8F%91%E5%B8%83%E9%85%8D%E7%BD%AE-2.png" alt="存放位置"></p>
-<p><img src="/images/AspNetRealease/%E5%8F%91%E5%B8%83%E9%85%8D%E7%BD%AE-3.png" alt="配置选择&quot;Release&quot;"></p>
-<ol start="5">
-<li>新界面点击”发布”</li>
-</ol>
-<p><img src="/images/AspNetRealease/%E5%8F%91%E5%B8%83%E9%85%8D%E7%BD%AE-4.png" alt="发布"></p>
 <h2 id="I-项目部署"><a href="#I-项目部署" class="headerlink" title="I. 项目部署"></a>I. 项目部署</h2><ol>
 <li>Win+R, 输入mstsc远程登陆服务器, 以Windows Server 2008为例, 填写服务器地址, 用户名Administrator(默认), 密码.</li>
 <li>服务器桌面, “我的电脑”右键”管理”-&gt;打开”服务器管理器”-&gt;”角色”-&gt;”添加角色”-&gt;下一步, 选择”Web服务器(IIS)”-&gt;下一步, 勾选”应用程序开发(Asp.Net, .NET扩展, ISAPI扩展, ISAPI筛选器), 常用HTTP功能(静态内容,默认文档,HTTP错误,HTTP重定向)”-&gt;下一步, “安装”-&gt;等待安装完成, 浏览器输入”127.0.0.1”查看是否安装成功.</li>
