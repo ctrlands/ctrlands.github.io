@@ -1,0 +1,10 @@
+# hexo robots.txt
+User-agent: *
+Allow: /
+Allow: /archives/
+Disallow: /vendors/
+Disallow: /js/
+Disallow: /css/
+
+Sitemap: http://ctrlans.com/sitemap.xml
+Sitemap: http://ctrlands.com/baidusitemap.xml
