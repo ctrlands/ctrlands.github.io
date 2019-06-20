@@ -2,25 +2,25 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Markdown Lint - ctrlands</title>
+<title>CSS规范-BEM - ctrlands</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="google-site-verification" content="GBmm3kWsKUc_Gdhd8XuQOn6u83Fn_kF9aEdmI2nPOwA">
 
 
 
-    <meta name="description" content="Markdown文档规范运行环境：Visual Studio Code + markdownlink插件以该markdownlink插件为标准, 例举自己编写md文档时出现的不规范行为.新建markdownlint自定义配置文件：.markdownlink.json">
-<meta name="keywords" content="Markdown Lint">
+    <meta name="description" content="CSS样式规范：BEM格式BEM: Block(块) Element(元素__) Modifier(修饰符–)Block（块）   该块名称描述它的目的（“这是什么？”-menu or buttons等）,而不是它的形状或状态 该块不影响其环境，这意味着您不应该设置块的外部几何（边距）或定位">
+<meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown Lint">
-<meta property="og:url" content="http://ctrlands.com/2019/06/19/Markdown-Lint/index.html">
+<meta property="og:title" content="CSS规范-BEM">
+<meta property="og:url" content="http://ctrlands.com/2019/06/20/CSS规范-BEM/index.html">
 <meta property="og:site_name" content="ctrlands">
-<meta property="og:description" content="Markdown文档规范运行环境：Visual Studio Code + markdownlink插件以该markdownlink插件为标准, 例举自己编写md文档时出现的不规范行为.新建markdownlint自定义配置文件：.markdownlink.json">
+<meta property="og:description" content="CSS样式规范：BEM格式BEM: Block(块) Element(元素__) Modifier(修饰符–)Block（块）   该块名称描述它的目的（“这是什么？”-menu or buttons等）,而不是它的形状或状态 该块不影响其环境，这意味着您不应该设置块的外部几何（边距）或定位">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ctrlands.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-20T06:50:08.562Z">
+<meta property="og:updated_time" content="2019-06-20T10:02:15.015Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Markdown Lint">
-<meta name="twitter:description" content="Markdown文档规范运行环境：Visual Studio Code + markdownlink插件以该markdownlink插件为标准, 例举自己编写md文档时出现的不规范行为.新建markdownlint自定义配置文件：.markdownlink.json">
+<meta name="twitter:title" content="CSS规范-BEM">
+<meta name="twitter:description" content="CSS样式规范：BEM格式BEM: Block(块) Element(元素__) Modifier(修饰符–)Block（块）   该块名称描述它的目的（“这是什么？”-menu or buttons等）,而不是它的形状或状态 该块不影响其环境，这意味着您不应该设置块的外部几何（边距）或定位">
 <meta name="twitter:image" content="http://ctrlands.com/images/og_image.png">
 
 
@@ -99,7 +99,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Markdown Lint" height="28">
+                <img src="/images/logo.svg" alt="CSS规范-BEM" height="28">
             
             </a>
         </div>
@@ -131,10 +131,6 @@
                     
                 
                 
-                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
-                    <i class="fas fa-list-ul"></i>
-                </a>
-                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -151,20 +147,13 @@
             <div class="columns">
                 
                     <div class="column is-12 has-order-2 column-main">
-    <aside id="article-toc" role="navigation" class="fixed">
-  <div id="article-toc-inner">
-      <strong class="sidebar-title">序：</strong>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#MD001"><span class="toc-text">MD001</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD010"><span class="toc-text">MD010</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD013"><span class="toc-text">MD013</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD022"><span class="toc-text">MD022</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD030"><span class="toc-text">MD030</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD031"><span class="toc-text">MD031</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD033"><span class="toc-text">MD033</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD034"><span class="toc-text">MD034</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD038"><span class="toc-text">MD038</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD047"><span class="toc-text">MD047</span></a></li></ol>
-  </div>
-</aside>
-
 <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-19T01:49:36.000Z">2019-06-19</time>
+                <time class="level-item has-text-grey" datetime="2019-06-20T06:09:59.000Z">2019-06-20</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Lint/">Lint</a>
@@ -174,7 +163,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes 读完 (大约 298 个字)
+                    2 minutes 读完 (大约 271 个字)
                 </span>
                 
                 
@@ -188,42 +177,44 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Markdown Lint
+                CSS规范-BEM
             
         </h1>
         <div class="content">
-            <script type="text/javascript" src="/js/ctrlands_tool.js"></script>
-
-<p>Markdown文档规范<br>运行环境：Visual Studio Code + <a href="https://github.com/DavidAnson/vscode-markdownlint" target="_blank" rel="noopener">markdownlink插件</a><br>以该markdownlink插件为标准, 例举自己编写md文档时出现的不规范行为.<br>新建markdownlint自定义配置文件：.markdownlink.json</p>
+            <h4 id="CSS样式规范：BEM格式"><a href="#CSS样式规范：BEM格式" class="headerlink" title="CSS样式规范：BEM格式"></a>CSS样式规范：BEM格式</h4><h5 id="BEM-Block-块-Element-元素-Modifier-修饰符–"><a href="#BEM-Block-块-Element-元素-Modifier-修饰符–" class="headerlink" title="BEM: Block(块) Element(元素__) Modifier(修饰符–)"></a>BEM: Block(块) Element(元素__) Modifier(修饰符–)</h5><p>Block（块）</p>
+<blockquote>
+<ul>
+<li>该块名称描述它的目的（“这是什么？”-menu or buttons等）,而不是它的形状或状态</li>
+<li>该块不影响其环境，这意味着您不应该设置块的外部几何（边距）或定位</li>
+</ul>
+</blockquote>
 <a id="more"></a>
 
-<h3 id="MD001"><a href="#MD001" class="headerlink" title="MD001"></a>MD001</h3><p>MD001-Heading levels should only increment by one level at a time(标题级别默认只能逐级增加)</p>
-<h3 id="MD010"><a href="#MD010" class="headerlink" title="MD010"></a>MD010</h3><p>MD010-Hard Tabs(默认tab与space不允许混用)<br>修改.markdownlink.json, 添加</p>
-<figure class="highlight json hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="hljs-attr">"MD010"</span>: <span class="hljs-literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Element（元素）</p>
+<blockquote>
+<ul>
+<li>该元素的名称描述它的目的（”这是什么？”-item or text等）,而不是它的形状或状态</li>
+<li>元素全名的结构: blcok-name__element-name.使用双下划线__与块名称分割</li>
+</ul>
+</blockquote>
+<p>Modifier (修饰符)</p>
+<blockquote>
+<ul>
+<li>该修饰符名称描述其外观或者状态或者行为</li>
+<li>修饰符的结构: block-name__elementName–ModifierName or block-name–Modifier 使用–连接</li>
+</ul>
+</blockquote>
+<ul>
+<li>根据BEM方法，块结构应平整，不需要反应块的嵌套DOM结构(这点表示有点不习惯)</li>
+</ul>
+<figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="hljs-selector-tag">style</span>&gt;</span><br><span class="line">  <span class="hljs-selector-class">.block</span> &#123;&#125;</span><br><span class="line">    <span class="hljs-selector-class">.block__elem1</span> &#123;&#125;</span><br><span class="line">    <span class="hljs-selector-class">.block__elem2</span> &#123;&#125;</span><br><span class="line">    <span class="hljs-selector-class">.block__elem3</span> &#123;&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class="block"&gt;</span><br><span class="line">  &lt;div class="block__elem1"&gt;</span><br><span class="line">    &lt;div class="block__elem2"&gt;&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div class="block__elem3"&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
-<h3 id="MD013"><a href="#MD013" class="headerlink" title="MD013"></a>MD013</h3><p>MD013-Line length(默认不超过80)<br>修改.markdownlink.json, 添加</p>
-<figure class="highlight json hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="hljs-attr">"MD013"</span>: <span class="hljs-literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>外部几何和定位，通过父块设置负责外部几何和定位的样式</li>
+</ul>
+<figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="hljs-selector-tag">style</span>&gt;</span><br><span class="line">  <span class="hljs-selector-class">.button</span> &#123;&#125;</span><br><span class="line">  <span class="hljs-selector-class">.header__button</span> &#123;</span><br><span class="line">    <span class="hljs-attribute">margin</span>: ;</span><br><span class="line">    <span class="hljs-attribute">padding</span>: ;</span><br><span class="line">    <span class="hljs-attribute">position</span>: ;</span><br><span class="line">    ....</span><br><span class="line">  &#125;</span><br><span class="line">&lt;<span class="hljs-selector-tag">style</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;header class="header"&gt;</span><br><span class="line">  &lt;button class="button header__button"&gt;&lt;/button&gt;</span><br><span class="line">&lt;/header&gt;</span><br></pre></td></tr></table></figure>
 
-<h3 id="MD022"><a href="#MD022" class="headerlink" title="MD022"></a>MD022</h3><p>MD022-Headings should be surrounded by blank lines(标题前后应换行)</p>
-<figure class="highlight markdown hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-section">## Title</span></span><br><span class="line"></span><br><span class="line">Some Text...</span><br></pre></td></tr></table></figure>
-
-<h3 id="MD030"><a href="#MD030" class="headerlink" title="MD030"></a>MD030</h3><p>MD030-Spaces after list markers(列表标记(例如’ -‘，’ *’，’ +’或’ 1.’)与列表项文本之间的空格数, 默认为1)</p>
-<h3 id="MD031"><a href="#MD031" class="headerlink" title="MD031"></a>MD031</h3><p>MD031-Fenced code blocks should be surrounded by blank lines(代码部分前后换行)</p>
-<h3 id="MD033"><a href="#MD033" class="headerlink" title="MD033"></a>MD033</h3><p>MD033-Inline HTML(默认: 标记时不允许使用原始HTML)<br>修改.markdownlink.json, 添加</p>
-<figure class="highlight json hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="hljs-attr">"MD033"</span>: <span class="hljs-literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="MD034"><a href="#MD034" class="headerlink" title="MD034"></a>MD034</h3><p>MD034-Bare URL used(使用了纯URL, 应使用<url>)
-eg:</url></p>
-<p><code>for more infomation, see http://ctrlands.com</code></p>
-<p>you should use:</p>
-<p><code>for more infomation, see &lt;http://ctrlands.com&gt;</code></p>
-<h3 id="MD038"><a href="#MD038" class="headerlink" title="MD038"></a>MD038</h3><p>MD038-Spaces inside code span elements(代码块范围不建议包含空格)<br>eg:</p>
-<figure class="highlight markdown hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-code">` some text... `</span></span><br></pre></td></tr></table></figure>
-
-<p>you should use:</p>
-<figure class="highlight markdown hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-code">`some text...`</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="MD047"><a href="#MD047" class="headerlink" title="MD047"></a>MD047</h3><p>MD047-Files should end with a single newline character(文档结束处空一行)</p>
+<p><font face="微软雅黑" size="3" color="#f03326">参考网址：</font><br><a href="https://en.bem.info/methodology/quick-start/" target="_blank" rel="noopener">https://en.bem.info/methodology/quick-start/</a></p>
 
         </div>
         
@@ -231,7 +222,7 @@ eg:</url></p>
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/Markdown-Lint/">Markdown Lint</a>
+                    <a class="has-link-grey -link" href="/tags/CSS/">CSS</a>
                 </div>
             </div>
         </div>
@@ -277,17 +268,10 @@ eg:</url></p>
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/06/20/CSS规范-BEM/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">CSS规范-BEM</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/17/KendoUI常见使用问题/">
-                <span class="level-item">Kendo UI常见使用问题</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/19/Markdown-Lint/">
+                <span class="level-item">Markdown Lint</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -299,7 +283,7 @@ eg:</url></p>
 <!-- <aside id="article-toc" role="navigation" class="fixed">
   <div id="article-toc-inner">
       <strong class="sidebar-title">序：</strong>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#MD001"><span class="toc-text">MD001</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD010"><span class="toc-text">MD010</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD013"><span class="toc-text">MD013</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD022"><span class="toc-text">MD022</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD030"><span class="toc-text">MD030</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD031"><span class="toc-text">MD031</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD033"><span class="toc-text">MD033</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD034"><span class="toc-text">MD034</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD038"><span class="toc-text">MD038</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD047"><span class="toc-text">MD047</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS样式规范：BEM格式"><span class="toc-text">CSS样式规范：BEM格式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#BEM-Block-块-Element-元素-Modifier-修饰符–"><span class="toc-text">BEM: Block(块) Element(元素__) Modifier(修饰符–)</span></a></li></ol></li></ol>
   </div>
 </aside> -->
 
@@ -336,7 +320,7 @@ eg:</url></p>
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/" rel="external nofollow">
                     
-                    <img src="/images/logo.svg" alt="Markdown Lint" height="28">
+                    <img src="/images/logo.svg" alt="CSS规范-BEM" height="28">
                     
                 </a>
                 <p class="is-size-7">
