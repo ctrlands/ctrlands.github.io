@@ -2,25 +2,25 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>CSS规范-BEM - ctrlands</title>
+<title>前端编码规范-ESLint - ctrlands</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="google-site-verification" content="GBmm3kWsKUc_Gdhd8XuQOn6u83Fn_kF9aEdmI2nPOwA">
 
 
 
-    <meta name="description" content="CSS样式规范：BEM格式BEM: Block(块) Element(元素_) Modifier(修饰符)Block（块）   该块名称描述它的目的（“这是什么？”-menu or buttons等）,而不是它的形状或状态 该块不影响其环境，这意味着您不应该设置块的外部几何（边距）或定位 功能独立的页面组件, 可重复使用">
-<meta name="keywords" content="CSS">
+    <meta name="description" content="coding…">
+<meta name="keywords" content="html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS规范-BEM">
-<meta property="og:url" content="http://ctrlands.com/2019/06/20/CSS规范-BEM/index.html">
+<meta property="og:title" content="前端编码规范-ESLint">
+<meta property="og:url" content="http://ctrlands.com/2019/06/21/前端编码规范-ESLint/index.html">
 <meta property="og:site_name" content="ctrlands">
-<meta property="og:description" content="CSS样式规范：BEM格式BEM: Block(块) Element(元素_) Modifier(修饰符)Block（块）   该块名称描述它的目的（“这是什么？”-menu or buttons等）,而不是它的形状或状态 该块不影响其环境，这意味着您不应该设置块的外部几何（边距）或定位 功能独立的页面组件, 可重复使用">
+<meta property="og:description" content="coding…">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://ctrlands.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-21T03:28:39.309Z">
+<meta property="og:updated_time" content="2019-06-21T10:03:32.406Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS规范-BEM">
-<meta name="twitter:description" content="CSS样式规范：BEM格式BEM: Block(块) Element(元素_) Modifier(修饰符)Block（块）   该块名称描述它的目的（“这是什么？”-menu or buttons等）,而不是它的形状或状态 该块不影响其环境，这意味着您不应该设置块的外部几何（边距）或定位 功能独立的页面组件, 可重复使用">
+<meta name="twitter:title" content="前端编码规范-ESLint">
+<meta name="twitter:description" content="coding…">
 <meta name="twitter:image" content="http://ctrlands.com/images/og_image.png">
 
 
@@ -99,7 +99,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="CSS规范-BEM" height="28">
+                <img src="/images/logo.svg" alt="前端编码规范-ESLint" height="28">
             
             </a>
         </div>
@@ -153,7 +153,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-20T06:09:59.000Z">2019-06-20</time>
+                <time class="level-item has-text-grey" datetime="2019-06-21T06:00:41.000Z">2019-06-21</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Lint/">Lint</a>
@@ -163,7 +163,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 337 个字)
+                    几秒 读完 (大约 1 个字)
                 </span>
                 
                 
@@ -177,53 +177,11 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                CSS规范-BEM
+                前端编码规范-ESLint
             
         </h1>
         <div class="content">
-            <h4 id="CSS样式规范：BEM格式"><a href="#CSS样式规范：BEM格式" class="headerlink" title="CSS样式规范：BEM格式"></a>CSS样式规范：BEM格式</h4><h5 id="BEM-Block-块-Element-元素-Modifier-修饰符"><a href="#BEM-Block-块-Element-元素-Modifier-修饰符" class="headerlink" title="BEM: Block(块) Element(元素_) Modifier(修饰符)"></a>BEM: Block(块) Element(元素<em>_) Modifier(修饰符</em>)</h5><p>Block（块）</p>
-<blockquote>
-<ul>
-<li>该块名称描述它的目的（“这是什么？”-menu or buttons等）,而不是它的形状或状态</li>
-<li>该块不影响其环境，这意味着您不应该设置块的外部几何（边距）或定位</li>
-<li>功能独立的页面组件, 可重复使用</li>
-</ul>
-</blockquote>
-<a id="more"></a>
-
-<p>Element（元素__）</p>
-<blockquote>
-<ul>
-<li>该元素的名称描述它的目的（”这是什么？”-item or text等）,而不是它的形状或状态</li>
-<li>元素全名的结构: blcok-name__element-name.使用双下划线__与块名称分割</li>
-<li>元素始终是块的一部分, 而不是另一个元素, 所以元素不能定义层级结构, 不能出现<code>block__elem1__elem2</code>这种写法</li>
-</ul>
-</blockquote>
-<p>Modifier (修饰符_)</p>
-<blockquote>
-<ul>
-<li>该修饰符名称描述其外观或者状态或者行为</li>
-<li>修饰符的结构: block-name__elementName_ModifierName or block-name_modifier-name 使用_连接</li>
-</ul>
-</blockquote>
-<div align="center">
-  <img src="/images/BEM/bem.png">
-</div>
-
-<ul>
-<li>根据BEM方法，块结构应平整，不需要反映块的嵌套DOM结构</li>
-</ul>
-<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span></span><br><span class="line">  .block &#123;&#125;</span><br><span class="line">    .block__elem1 &#123;&#125;</span><br><span class="line">    .block__elem2 &#123;&#125;</span><br><span class="line">    .block__elem3 &#123;&#125;</span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block"</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block__elem1"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block__elem2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block__elem3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>常见写法:</p>
-<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">&lt;!-- block, block__item, block_modifier, block__item_modifier --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"menu menu_active"</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"menu__item menu__item_active"</span>&gt;</span>Menu Item1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"menu__item"</span>&gt;</span>Menu Item2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"menu__item"</span>&gt;</span>Menu Item3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>外部几何和定位，通过父块设置负责外部几何和定位的样式</li>
-</ul>
-<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span></span><br><span class="line">  .button &#123;&#125;</span><br><span class="line">  .header__button &#123;</span><br><span class="line">    margin: ;</span><br><span class="line">    padding: ;</span><br><span class="line">    position: ;</span><br><span class="line">    ....</span><br><span class="line">  &#125;</span><br><span class="line"><span class="hljs-xml"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-xml"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header"</span>&gt;</span></span></span><br><span class="line"><span class="hljs-xml">  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button header__button"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span></span><br><span class="line"><span class="hljs-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<p><font face="微软雅黑" size="3" color="#f03326">了解更多：</font><a href="https://en.bem.info/methodology/quick-start/" target="_blank" rel="noopener">https://en.bem.info/methodology/quick-start/</a></p>
+            <p>coding…</p>
 
         </div>
         
@@ -231,7 +189,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/CSS/">CSS</a>
+                    <a class="has-link-grey -link" href="/tags/html/">html</a>
                 </div>
             </div>
         </div>
@@ -278,16 +236,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/06/21/前端编码规范-ESLint/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/06/21/如何搭建一个简易Node-js服务器/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">前端编码规范-ESLint</span>
+                <span class="level-item">如何搭建一个简易Node.js服务器</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/19/Markdown-Lint/">
-                <span class="level-item">Markdown Lint</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/20/CSS规范-BEM/">
+                <span class="level-item">CSS规范-BEM</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -299,7 +257,7 @@
 <!-- <aside id="article-toc" role="navigation" class="fixed">
   <div id="article-toc-inner">
       <strong class="sidebar-title">序：</strong>
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS样式规范：BEM格式"><span class="toc-text">CSS样式规范：BEM格式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#BEM-Block-块-Element-元素-Modifier-修饰符"><span class="toc-text">BEM: Block(块) Element(元素_) Modifier(修饰符)</span></a></li></ol></li></ol>
+      
   </div>
 </aside> -->
 
@@ -336,7 +294,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/" rel="external nofollow">
                     
-                    <img src="/images/logo.svg" alt="CSS规范-BEM" height="28">
+                    <img src="/images/logo.svg" alt="前端编码规范-ESLint" height="28">
                     
                 </a>
                 <p class="is-size-7">
