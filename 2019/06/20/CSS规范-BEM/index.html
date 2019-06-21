@@ -8,19 +8,19 @@
 
 
 
-    <meta name="description" content="CSS样式规范：BEM格式BEM: Block(块) Element(元素__) Modifier(修饰符–)Block（块）   该块名称描述它的目的（“这是什么？”-menu or buttons等）,而不是它的形状或状态 该块不影响其环境，这意味着您不应该设置块的外部几何（边距）或定位">
+    <meta name="description" content="CSS样式规范：BEM格式BEM: Block(块) Element(元素_) Modifier(修饰符)Block（块）   该块名称描述它的目的（“这是什么？”-menu or buttons等）,而不是它的形状或状态 该块不影响其环境，这意味着您不应该设置块的外部几何（边距）或定位 功能独立的页面组件, 可重复使用">
 <meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS规范-BEM">
 <meta property="og:url" content="http://ctrlands.com/2019/06/20/CSS规范-BEM/index.html">
 <meta property="og:site_name" content="ctrlands">
-<meta property="og:description" content="CSS样式规范：BEM格式BEM: Block(块) Element(元素__) Modifier(修饰符–)Block（块）   该块名称描述它的目的（“这是什么？”-menu or buttons等）,而不是它的形状或状态 该块不影响其环境，这意味着您不应该设置块的外部几何（边距）或定位">
-<meta property="og:locale" content="zh-Hans">
+<meta property="og:description" content="CSS样式规范：BEM格式BEM: Block(块) Element(元素_) Modifier(修饰符)Block（块）   该块名称描述它的目的（“这是什么？”-menu or buttons等）,而不是它的形状或状态 该块不影响其环境，这意味着您不应该设置块的外部几何（边距）或定位 功能独立的页面组件, 可重复使用">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://ctrlands.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-20T10:02:15.015Z">
+<meta property="og:updated_time" content="2019-06-21T03:28:39.309Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS规范-BEM">
-<meta name="twitter:description" content="CSS样式规范：BEM格式BEM: Block(块) Element(元素__) Modifier(修饰符–)Block（块）   该块名称描述它的目的（“这是什么？”-menu or buttons等）,而不是它的形状或状态 该块不影响其环境，这意味着您不应该设置块的外部几何（边距）或定位">
+<meta name="twitter:description" content="CSS样式规范：BEM格式BEM: Block(块) Element(元素_) Modifier(修饰符)Block（块）   该块名称描述它的目的（“这是什么？”-menu or buttons等）,而不是它的形状或状态 该块不影响其环境，这意味着您不应该设置块的外部几何（边距）或定位 功能独立的页面组件, 可重复使用">
 <meta name="twitter:image" content="http://ctrlands.com/images/og_image.png">
 
 
@@ -163,7 +163,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes 读完 (大约 271 个字)
+                    2 分钟 读完 (大约 337 个字)
                 </span>
                 
                 
@@ -181,40 +181,49 @@
             
         </h1>
         <div class="content">
-            <h4 id="CSS样式规范：BEM格式"><a href="#CSS样式规范：BEM格式" class="headerlink" title="CSS样式规范：BEM格式"></a>CSS样式规范：BEM格式</h4><h5 id="BEM-Block-块-Element-元素-Modifier-修饰符–"><a href="#BEM-Block-块-Element-元素-Modifier-修饰符–" class="headerlink" title="BEM: Block(块) Element(元素__) Modifier(修饰符–)"></a>BEM: Block(块) Element(元素__) Modifier(修饰符–)</h5><p>Block（块）</p>
+            <h4 id="CSS样式规范：BEM格式"><a href="#CSS样式规范：BEM格式" class="headerlink" title="CSS样式规范：BEM格式"></a>CSS样式规范：BEM格式</h4><h5 id="BEM-Block-块-Element-元素-Modifier-修饰符"><a href="#BEM-Block-块-Element-元素-Modifier-修饰符" class="headerlink" title="BEM: Block(块) Element(元素_) Modifier(修饰符)"></a>BEM: Block(块) Element(元素<em>_) Modifier(修饰符</em>)</h5><p>Block（块）</p>
 <blockquote>
 <ul>
 <li>该块名称描述它的目的（“这是什么？”-menu or buttons等）,而不是它的形状或状态</li>
 <li>该块不影响其环境，这意味着您不应该设置块的外部几何（边距）或定位</li>
+<li>功能独立的页面组件, 可重复使用</li>
 </ul>
 </blockquote>
 <a id="more"></a>
 
-<p>Element（元素）</p>
+<p>Element（元素__）</p>
 <blockquote>
 <ul>
 <li>该元素的名称描述它的目的（”这是什么？”-item or text等）,而不是它的形状或状态</li>
 <li>元素全名的结构: blcok-name__element-name.使用双下划线__与块名称分割</li>
+<li>元素始终是块的一部分, 而不是另一个元素, 所以元素不能定义层级结构, 不能出现<code>block__elem1__elem2</code>这种写法</li>
 </ul>
 </blockquote>
-<p>Modifier (修饰符)</p>
+<p>Modifier (修饰符_)</p>
 <blockquote>
 <ul>
 <li>该修饰符名称描述其外观或者状态或者行为</li>
-<li>修饰符的结构: block-name__elementName–ModifierName or block-name–Modifier 使用–连接</li>
+<li>修饰符的结构: block-name__elementName_ModifierName or block-name_modifier-name 使用_连接</li>
 </ul>
 </blockquote>
+<div align="center">
+  <img src="/images/BEM/bem.png">
+</div>
+
 <ul>
-<li>根据BEM方法，块结构应平整，不需要反应块的嵌套DOM结构(这点表示有点不习惯)</li>
+<li>根据BEM方法，块结构应平整，不需要反映块的嵌套DOM结构</li>
 </ul>
-<figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="hljs-selector-tag">style</span>&gt;</span><br><span class="line">  <span class="hljs-selector-class">.block</span> &#123;&#125;</span><br><span class="line">    <span class="hljs-selector-class">.block__elem1</span> &#123;&#125;</span><br><span class="line">    <span class="hljs-selector-class">.block__elem2</span> &#123;&#125;</span><br><span class="line">    <span class="hljs-selector-class">.block__elem3</span> &#123;&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class="block"&gt;</span><br><span class="line">  &lt;div class="block__elem1"&gt;</span><br><span class="line">    &lt;div class="block__elem2"&gt;&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div class="block__elem3"&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span></span><br><span class="line">  .block &#123;&#125;</span><br><span class="line">    .block__elem1 &#123;&#125;</span><br><span class="line">    .block__elem2 &#123;&#125;</span><br><span class="line">    .block__elem3 &#123;&#125;</span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block"</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block__elem1"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block__elem2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block__elem3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>常见写法:</p>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">&lt;!-- block, block__item, block_modifier, block__item_modifier --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"menu menu_active"</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"menu__item menu__item_active"</span>&gt;</span>Menu Item1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"menu__item"</span>&gt;</span>Menu Item2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"menu__item"</span>&gt;</span>Menu Item3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>外部几何和定位，通过父块设置负责外部几何和定位的样式</li>
 </ul>
-<figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="hljs-selector-tag">style</span>&gt;</span><br><span class="line">  <span class="hljs-selector-class">.button</span> &#123;&#125;</span><br><span class="line">  <span class="hljs-selector-class">.header__button</span> &#123;</span><br><span class="line">    <span class="hljs-attribute">margin</span>: ;</span><br><span class="line">    <span class="hljs-attribute">padding</span>: ;</span><br><span class="line">    <span class="hljs-attribute">position</span>: ;</span><br><span class="line">    ....</span><br><span class="line">  &#125;</span><br><span class="line">&lt;<span class="hljs-selector-tag">style</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;header class="header"&gt;</span><br><span class="line">  &lt;button class="button header__button"&gt;&lt;/button&gt;</span><br><span class="line">&lt;/header&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span></span><br><span class="line">  .button &#123;&#125;</span><br><span class="line">  .header__button &#123;</span><br><span class="line">    margin: ;</span><br><span class="line">    padding: ;</span><br><span class="line">    position: ;</span><br><span class="line">    ....</span><br><span class="line">  &#125;</span><br><span class="line"><span class="hljs-xml"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-xml"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header"</span>&gt;</span></span></span><br><span class="line"><span class="hljs-xml">  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button header__button"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span></span><br><span class="line"><span class="hljs-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 
-<p><font face="微软雅黑" size="3" color="#f03326">参考网址：</font><br><a href="https://en.bem.info/methodology/quick-start/" target="_blank" rel="noopener">https://en.bem.info/methodology/quick-start/</a></p>
+<p><font face="微软雅黑" size="3" color="#f03326">了解更多：</font><a href="https://en.bem.info/methodology/quick-start/" target="_blank" rel="noopener">https://en.bem.info/methodology/quick-start/</a></p>
 
         </div>
         
@@ -283,7 +292,7 @@
 <!-- <aside id="article-toc" role="navigation" class="fixed">
   <div id="article-toc-inner">
       <strong class="sidebar-title">序：</strong>
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS样式规范：BEM格式"><span class="toc-text">CSS样式规范：BEM格式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#BEM-Block-块-Element-元素-Modifier-修饰符–"><span class="toc-text">BEM: Block(块) Element(元素__) Modifier(修饰符–)</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS样式规范：BEM格式"><span class="toc-text">CSS样式规范：BEM格式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#BEM-Block-块-Element-元素-Modifier-修饰符"><span class="toc-text">BEM: Block(块) Element(元素_) Modifier(修饰符)</span></a></li></ol></li></ol>
   </div>
 </aside> -->
 
@@ -374,7 +383,7 @@
 </footer>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
-<script>moment.locale("zh-Hans");</script>
+<script>moment.locale("zh-CN");</script>
 
 
     
