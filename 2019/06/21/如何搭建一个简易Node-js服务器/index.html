@@ -17,7 +17,7 @@
 <meta property="og:description" content="在这个前后端分离的时代, 前台页面数据的渲染往往依托于后台, 我们不能等后台代码编写完成才来编写前台页面, 因此我们可以自己搭建一个简易的后台服务, 或者使用postman来模拟获取后台数据. 今天我们选择使用Node.js + express 来搭建一个简易的后台服务.">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://ctrlands.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-21T10:03:35.396Z">
+<meta property="og:updated_time" content="2019-06-24T02:47:36.402Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何搭建一个简易Node.js服务器">
 <meta name="twitter:description" content="在这个前后端分离的时代, 前台页面数据的渲染往往依托于后台, 我们不能等后台代码编写完成才来编写前台页面, 因此我们可以自己搭建一个简易的后台服务, 或者使用postman来模拟获取后台数据. 今天我们选择使用Node.js + express 来搭建一个简易的后台服务.">
@@ -131,6 +131,10 @@
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -147,6 +151,13 @@
             <div class="columns">
                 
                     <div class="column is-12 has-order-2 column-main">
+    <aside id="article-toc" role="navigation" class="fixed">
+  <div id="article-toc-inner">
+      <strong class="sidebar-title">序：</strong>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装express"><span class="toc-text">安装express</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化项目"><span class="toc-text">初始化项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行项目"><span class="toc-text">运行项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改默认模板引擎"><span class="toc-text">修改默认模板引擎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#跨域配置"><span class="toc-text">跨域配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由管理"><span class="toc-text">路由管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#连接Mysql"><span class="toc-text">连接Mysql</span></a></li></ol>
+  </div>
+</aside>
+
 <div class="card">
     
     <div class="card-content article ">
@@ -163,7 +174,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    5 分钟 读完 (大约 675 个字)
+                    5 分钟 读完 (大约 688 个字)
                 </span>
                 
                 
@@ -181,7 +192,8 @@
             
         </h1>
         <div class="content">
-            <p>在这个前后端分离的时代, 前台页面数据的渲染往往依托于后台, 我们不能等后台代码编写完成才来编写前台页面, 因此我们可以自己搭建一个简易的后台服务, 或者使用postman来模拟获取后台数据. 今天我们选择使用Node.js + express 来搭建一个简易的后台服务.</p>
+            <script type="text/javascript" src="/js/ctrlands_tool.js"></script>
+<p>在这个前后端分离的时代, 前台页面数据的渲染往往依托于后台, 我们不能等后台代码编写完成才来编写前台页面, 因此我们可以自己搭建一个简易的后台服务, 或者使用postman来模拟获取后台数据. 今天我们选择使用Node.js + express 来搭建一个简易的后台服务.</p>
 <a id="more"></a>
 
 <p>既然选择使用Node, 那么Node环境肯定是需要安装的, 至于如何安装Node, 这里就不做多的介绍了.</p>
@@ -214,6 +226,9 @@
 <figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// /web/index.js</span></span><br><span class="line"><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">'express'</span>);</span><br><span class="line"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">let</span> router = express.Router();</span><br><span class="line">  router.get(<span class="hljs-string">'/'</span>, (req, res) =&gt; &#123;</span><br><span class="line">    res.render(<span class="hljs-string">'web/index.ejs'</span>, &#123;&#125;);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  router.use(<span class="hljs-string">'/xxx'</span>, <span class="hljs-built_in">require</span>(<span class="hljs-string">'./xxx'</span>)());</span><br><span class="line">  <span class="hljs-comment">// router.use('/route1', require('./route1')());</span></span><br><span class="line">  <span class="hljs-comment">// router.use('/route2', require('./route2')());</span></span><br><span class="line">  <span class="hljs-comment">// ......  more ......</span></span><br><span class="line">  <span class="hljs-keyword">return</span> router;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// /cms/index.js</span></span><br><span class="line"><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">'express'</span>);</span><br><span class="line"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">let</span> router = express.Router();</span><br><span class="line">  router.get(<span class="hljs-string">'/'</span>, (req, res) =&gt; &#123;</span><br><span class="line">    res.render(<span class="hljs-string">'cms/index.ejs'</span>, &#123;&#125;);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  router.use(<span class="hljs-string">'/xxx'</span>, <span class="hljs-built_in">require</span>(<span class="hljs-string">'./xxx'</span>)());</span><br><span class="line">  <span class="hljs-comment">// router.use('/route1', require('./route1')());</span></span><br><span class="line">  <span class="hljs-comment">// router.use('/route2', require('./route2')());</span></span><br><span class="line">  <span class="hljs-comment">// ......  more ......</span></span><br><span class="line">  <span class="hljs-keyword">return</span> router;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="连接Mysql"><a href="#连接Mysql" class="headerlink" title="连接Mysql"></a>连接Mysql</h3><p>首先安装mysql</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install mysql -save</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -283,7 +298,7 @@
 <!-- <aside id="article-toc" role="navigation" class="fixed">
   <div id="article-toc-inner">
       <strong class="sidebar-title">序：</strong>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装express"><span class="toc-text">安装express</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化项目"><span class="toc-text">初始化项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行项目"><span class="toc-text">运行项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改默认模板引擎"><span class="toc-text">修改默认模板引擎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#跨域配置"><span class="toc-text">跨域配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由管理"><span class="toc-text">路由管理</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装express"><span class="toc-text">安装express</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化项目"><span class="toc-text">初始化项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行项目"><span class="toc-text">运行项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改默认模板引擎"><span class="toc-text">修改默认模板引擎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#跨域配置"><span class="toc-text">跨域配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由管理"><span class="toc-text">路由管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#连接Mysql"><span class="toc-text">连接Mysql</span></a></li></ol>
   </div>
 </aside> -->
 
