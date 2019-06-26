@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://ctrlands.com/2019/06/17/KendoUI%E5%B8%B8%E8%A7%81%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2019-06-26</lastmod>
+  </url>  <url>
     <loc>http://ctrlands.com/2019/06/21/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93Node-js%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2019-06-24</lastmod>
   </url>  <url>
@@ -12,9 +15,6 @@
   </url>  <url>
     <loc>http://ctrlands.com/2019/06/19/Markdown-Lint/</loc>
     <lastmod>2019-06-20</lastmod>
-  </url>  <url>
-    <loc>http://ctrlands.com/2019/06/17/KendoUI%E5%B8%B8%E8%A7%81%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2019-06-19</lastmod>
   </url>  <url>
     <loc>http://ctrlands.com/2019/06/13/hexo+githubPage%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2019-06-19</lastmod>
