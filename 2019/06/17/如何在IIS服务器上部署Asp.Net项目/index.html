@@ -17,7 +17,7 @@
 <meta property="og:description" content="I. 项目发布使用工具及环境: Visual Studio 2017 + Windows Server 2008  项目解决方案右键选择”批生成“">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://ctrlands.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-19T02:32:26.205Z">
+<meta property="og:updated_time" content="2019-07-17T08:43:42.061Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何在IIS服务器上部署Asp.Net项目">
 <meta name="twitter:description" content="I. 项目发布使用工具及环境: Visual Studio 2017 + Windows Server 2008  项目解决方案右键选择”批生成“">
@@ -163,7 +163,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分钟 读完 (大约 438 个字)
+                    4 分钟 读完 (大约 548 个字)
                 </span>
                 
                 
@@ -195,7 +195,7 @@
 <li>服务器桌面, “我的电脑”右键”管理”-&gt;打开”服务器管理器”-&gt;”角色”-&gt;”添加角色”-&gt;下一步, 选择”Web服务器(IIS)”-&gt;下一步, 勾选”应用程序开发(Asp.Net, .NET扩展, ISAPI扩展, ISAPI筛选器), 常用HTTP功能(静态内容,默认文档,HTTP错误,HTTP重定向)”-&gt;下一步, “安装”-&gt;等待安装完成, 浏览器输入”127.0.0.1”查看是否安装成功.</li>
 <li>“开始”菜单-&gt;Internet信息服务(IIS)管理器-&gt;”网站”右键”添加网站”-&gt;填写”网站名称”, “物理路径”选择刚才发布文件的位置, 填写”端口”号(购买的服务器需要开放该端口)</li>
 </ol>
-<h2 id="Ⅲ-其他"><a href="#Ⅲ-其他" class="headerlink" title="Ⅲ. 其他"></a>Ⅲ. 其他</h2><p>SQL Server运行需要.Netframework和VS2015环境, SQL Server TCP端口1433可能未设置. 打开SQL Server配置管理器, SQLEXPRESS的协议-&gt;TCP/IP右键-&gt;IPALL-&gt;TCP端口1433</p>
+<h2 id="Ⅲ-其他"><a href="#Ⅲ-其他" class="headerlink" title="Ⅲ. 其他"></a>Ⅲ. 其他</h2><p>IIS中, 选择你的网站项目添加”绑定”(右侧), 端口号填写80, 填写其他端口会导致通过域名访问时的页面是iis默认的首页, 而不是项目的首页. 绑定值添加两条记录yourdomain.com, <a href="http://www.yourdomain.com" target="_blank" rel="noopener">www.yourdomain.com</a>, 这样就可以通过两种方式访问了.(如果只添加了yourdomain.com, 当你通过<a href="http://www.yourdomain.com访问的时候就页面就会显示404" target="_blank" rel="noopener">www.yourdomain.com访问的时候就页面就会显示404</a>).<br>SQL Server运行需要.Netframework和VS2015环境, SQL Server TCP端口1433可能未设置. 打开SQL Server配置管理器, SQLEXPRESS的协议-&gt;TCP/IP右键-&gt;IPALL-&gt;TCP端口1433</p>
 
         </div>
         
