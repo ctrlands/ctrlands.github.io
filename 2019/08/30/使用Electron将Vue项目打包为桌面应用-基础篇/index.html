@@ -2,25 +2,25 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>浏览器Cookie过期后未被自动删除分析 - ctrlands</title>
+<title>使用Electron将Vue项目打包为桌面应用-基础篇 - ctrlands</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="google-site-verification" content="GBmm3kWsKUc_Gdhd8XuQOn6u83Fn_kF9aEdmI2nPOwA">
 
 
 
-    <meta name="description" content="最近在做一个项目, 其中一个需求是用户登陆的时候可以记住密码, 有效时间内可以不用输入用户名和密码, 相关信息自动填充到输入框, 用户直接点击登陆就可以了. 我想到的第一个方法就是用cookie, 用户登陆校验成功后, 将用户的信息保存到cookie中.">
-<meta name="keywords" content="html">
+    <meta name="description" content="一天下午, 我正吹着空调, 带着耳机, 愉快的扮演着代码搬运工, 突然我的组长告诉我, 让我把一个vue项目打包成桌面应用. (ps: 啥, vue项目还能打包成桌面应用, 请自行脑补我的黑人脸问号), 后来组长发给我一条消息: Electron+Vue. 抱着try yi try的态度, 打开了搜索引擎, 跟着相关文档step by step, 哎哟, 不错哦, 还真阔以, 牛beer. 运行一">
+<meta name="keywords" content="Electron">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浏览器Cookie过期后未被自动删除分析">
-<meta property="og:url" content="http://ctrlands.com/2019/08/30/浏览器Cookie过期后未被自动删除分析/index.html">
+<meta property="og:title" content="使用Electron将Vue项目打包为桌面应用-基础篇">
+<meta property="og:url" content="http://ctrlands.com/2019/08/30/使用Electron将Vue项目打包为桌面应用-基础篇/index.html">
 <meta property="og:site_name" content="ctrlands">
-<meta property="og:description" content="最近在做一个项目, 其中一个需求是用户登陆的时候可以记住密码, 有效时间内可以不用输入用户名和密码, 相关信息自动填充到输入框, 用户直接点击登陆就可以了. 我想到的第一个方法就是用cookie, 用户登陆校验成功后, 将用户的信息保存到cookie中.">
+<meta property="og:description" content="一天下午, 我正吹着空调, 带着耳机, 愉快的扮演着代码搬运工, 突然我的组长告诉我, 让我把一个vue项目打包成桌面应用. (ps: 啥, vue项目还能打包成桌面应用, 请自行脑补我的黑人脸问号), 后来组长发给我一条消息: Electron+Vue. 抱着try yi try的态度, 打开了搜索引擎, 跟着相关文档step by step, 哎哟, 不错哦, 还真阔以, 牛beer. 运行一">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://ctrlands.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-08-30T07:53:40.610Z">
+<meta property="og:updated_time" content="2019-08-30T09:56:21.418Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浏览器Cookie过期后未被自动删除分析">
-<meta name="twitter:description" content="最近在做一个项目, 其中一个需求是用户登陆的时候可以记住密码, 有效时间内可以不用输入用户名和密码, 相关信息自动填充到输入框, 用户直接点击登陆就可以了. 我想到的第一个方法就是用cookie, 用户登陆校验成功后, 将用户的信息保存到cookie中.">
+<meta name="twitter:title" content="使用Electron将Vue项目打包为桌面应用-基础篇">
+<meta name="twitter:description" content="一天下午, 我正吹着空调, 带着耳机, 愉快的扮演着代码搬运工, 突然我的组长告诉我, 让我把一个vue项目打包成桌面应用. (ps: 啥, vue项目还能打包成桌面应用, 请自行脑补我的黑人脸问号), 后来组长发给我一条消息: Electron+Vue. 抱着try yi try的态度, 打开了搜索引擎, 跟着相关文档step by step, 哎哟, 不错哦, 还真阔以, 牛beer. 运行一">
 <meta name="twitter:image" content="http://ctrlands.com/images/og_image.png">
 
 
@@ -99,7 +99,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="浏览器Cookie过期后未被自动删除分析" height="28">
+                <img src="/images/logo.svg" alt="使用Electron将Vue项目打包为桌面应用-基础篇" height="28">
             
             </a>
         </div>
@@ -153,17 +153,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-30T07:01:07.000Z">2019-08-30</time>
+                <time class="level-item has-text-grey" datetime="2019-08-30T08:02:44.000Z">2019-08-30</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/html/">html</a>
+                <a class="has-link-grey -link" href="/categories/Vue/">Vue</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分钟 读完 (大约 452 个字)
+                    7 分钟 读完 (大约 996 个字)
                 </span>
                 
                 
@@ -177,13 +177,44 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                浏览器Cookie过期后未被自动删除分析
+                使用Electron将Vue项目打包为桌面应用-基础篇
             
         </h1>
         <div class="content">
-            <p>最近在做一个项目, 其中一个需求是用户登陆的时候可以记住密码, 有效时间内可以不用输入用户名和密码, 相关信息自动填充到输入框, 用户直接点击登陆就可以了. 我想到的第一个方法就是用cookie, 用户登陆校验成功后, 将用户的信息保存到cookie中.</p>
+            <p>一天下午, 我正吹着空调, 带着耳机, 愉快的扮演着代码搬运工, 突然我的组长告诉我, 让我把一个vue项目打包成桌面应用. (ps: 啥, vue项目还能打包成桌面应用, 请自行脑补我的黑人脸问号), 后来组长发给我一条消息: Electron+Vue. 抱着try yi try的态度, 打开了搜索引擎, 跟着相关文档step by step, 哎哟, 不错哦, 还真阔以, 牛beer. 运行一看, 居然还阔以f12, 再一看, 不就是那二锅头兑的那白开水嘛, 不好意思, 拿错剧本了, 不就是一个桌面应用的壳子套个浏览器嘛. 不过还是牛beer. 本着技多不压身(实之吾恐忘之), 特此以文档记之.</p>
 <a id="more"></a>
-<p>可是后来发现超过设置的cookie的最大期限, cookie仍然存在浏览器中, 查询后才知道, cookie的设置时间与服务器的时间时区有关, 我们设置cookie的时候一般使用的是本地时间, 查看请求header里面可以看到data, 这个时间和本地时间不一样的, 我们设置的cookie时间是以服务器中的这个时间为准的.<br>eg：<br>注意图片箭头指示位置时间, 当前时间2019/8/30 15:32, 而我们生成的cookie的最大时间为2019/8/30 07:34:52<br><img src="/images/Cookie/set-client.png" alt="本地生成cookie"><br><br>这个时候已经超过了cookie的最大期限, 按理说它应该被浏览器自动清除了, 可是它还是存在, 这不恶心人吗. 我们再看下面这张图片<br><img src="/images/Cookie/set-server.png" alt="服务器时区"><br><br>这个是用户登陆请求的api信息, 我们可以看到箭头指示位置的时间, 本地时间是15:32, 而服务器的时间才07:32, 我设置cookie的时候, 时间设置的约2分钟, 刚好和cooke的最大时间07:34吻合,<br>如果这样的话, 本地时间为15:34的时候, cookie就应该被浏览器自动清除了.<br><img src="/images/Cookie/clear.png" alt="cookie到期"><br><br>如上图所示, 果不其然. 到了cookie的最大期限后, cookie便会被浏览器自动清除的.</p>
+
+<p>使用Electron将Vue项目打包成桌面应用有两种方式(就目前而言, 我就只知道这两种2333), 一种是将vue项目打包扔进Electron项目中, 另外一种就是在Vue项目引入Electron, 然后在Vue中打包为桌面应用. 话不多说, 开整.</p>
+<p>本文以第二种方式为例:</p>
+<ol>
+<li>先创建一个Electron-Vue项目</li>
+</ol>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init simulatedgreg/electron-vue yourprojectname</span><br></pre></td></tr></table></figure>
+
+<p>Electron-Vue模板为我们封装好了相关Electron配置, 拿来即用. 然后根据自己需求选择配置, 打包方式我选的’builder’. 模板下载完成后, 进入文件, 下载相关依赖包. </p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install</span><br></pre></td></tr></table></figure>
+
+<p><font color="#f03326">(重要: 不要使用npm, 使用cnpm, 原因: npm: 下载速度=树懒的速度, cnpm: 比npm的速度稍微快一点)</font>.因为一些Electron的相关依赖包在墙外, 使用npm有很大几率会下载失败, 当时我不知道, 使用的npm, 结果把我卡在这儿了, 这也下载失败, 那也下载失败, 忍不住想大吼一句ZnVjaw==相关依赖下载完成后, 运行</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+<p>就可以看到界面了. 大概就是下图的样子<br><img src="/images/Electron/index.png" alt="首页"><br><br>下方就是浏览器中的控制台.</p>
+<ol start="2">
+<li>打包Vue项目为桌面应用<br>打包命令为:<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>执行命令后, 然后就会下载相关Electron的相关依赖包进行打包, 然而就在下载相关依赖包的时候问题就接踵而至了, 由于不可抗力因素原因, 我们无法通过cnpm方式下载相关依赖包, 所以我们需要手动去下载相关依赖包, 然后放在相关文件夹中. 需要的无法下载的相关依赖包我们可以在执行npm run build的时候看到.<br>需要的相关依赖包可能涉及到(以windows为例, 以你所需的Electron为准):</p>
+<p><code>electron-v2.0.18-win32-x64.zip</code></p>
+<p>可在这里下载<a href="https://npm.taobao.org/mirrors/electron/" target="_blank" rel="noopener">淘宝镜像站</a>, 或在这里下载<a href="https://github.com/electron/electron/releases" target="_blank" rel="noopener">官方git仓库</a><br>放在C:\Users\username\ .electron\electron-v2.0.18-win32-x64.zip(不需解压)<br>同时放在<br>C:\Users\username\AppData\Local\electron\Cache\electron-v2.0.18-win32-x64.zip(不需解压)</p>
+<p>所需文件</p>
+<p><code>nsis-3.0.3.2.7z nsis-resources-3.3.0.7z winCodeSign-2.4.0.7z app-builder-v0.6.1-x64.7z(可能需要)</code></p>
+<p>主路径: </p>
+<p><code>C:\Users\username\AppData\Local\electron-builder\Cache\</code></p>
+<p>C:\Users\username\AppData\Local\electron-builder\Cache\nsis\nsis-3.0.3.2.7z(需解压)<br>C:\Users\username\AppData\Local\electron-builder\Cache\nsis\nsis-resources-3.3.0.7z(需解压)<br>C:\Users\username\AppData\Local\electron-builder\Cache\winCodeSign\winCodeSign-2.4.0.7z(需解压)<br>C:\Users\username\AppData\Local\electron-builder\Cache\app-builder\app-builder-v0.6.1-x64.7z(可能需要, 需解压)</p>
+<p>文件结构如下:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">electron</span><br><span class="line">    Cache</span><br><span class="line">        electron-v2.0.18-win32-x64.zip</span><br><span class="line">        SHASUMS256.txt-2.0.18</span><br><span class="line">electron-builder</span><br><span class="line">    cache</span><br><span class="line">        app-builder</span><br><span class="line">            app-builder-v0.6.1-x64</span><br><span class="line">                解压app-builder-v0.6.1-x64.7z所得文件</span><br><span class="line">        nsis</span><br><span class="line">            nsis-3.0.3.2</span><br><span class="line">                解压nsis-3.0.3.2.7z所得文件</span><br><span class="line">            nsis-resources-3.3.0</span><br><span class="line">                解压nsis-resources-3.3.0.7z所得文件</span><br><span class="line">        winCodeSign</span><br><span class="line">            winCodeSign-2.4.0</span><br><span class="line">                解压winCodeSign-2.4.0.7z所得文件</span><br></pre></td></tr></table></figure>
+
+<p>相关依赖包下载安装完成后, 就等打包, 打包完成后的文件放在项目根目录/dist文件下.<br><img src="/images/Electron/build.png" alt="打包完成的桌面应用文件"><br><br>图中箭头指示的就是打包完成的桌面应用文件.</p>
 
         </div>
         
@@ -191,7 +222,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/html/">html</a>
+                    <a class="has-link-grey -link" href="/tags/Electron/">Electron</a>
                 </div>
             </div>
         </div>
@@ -237,17 +268,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/30/使用Electron将Vue项目打包为桌面应用-基础篇/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">使用Electron将Vue项目打包为桌面应用-基础篇</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/07/16/React-Native环境搭建/">
-                <span class="level-item">React Native环境搭建</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/30/浏览器Cookie过期后未被自动删除分析/">
+                <span class="level-item">浏览器Cookie过期后未被自动删除分析</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -296,7 +320,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/" rel="external nofollow">
                     
-                    <img src="/images/logo.svg" alt="浏览器Cookie过期后未被自动删除分析" height="28">
+                    <img src="/images/logo.svg" alt="使用Electron将Vue项目打包为桌面应用-基础篇" height="28">
                     
                 </a>
                 <p class="is-size-7">
