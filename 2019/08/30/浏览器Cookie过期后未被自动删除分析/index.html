@@ -2,25 +2,25 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>React Native环境搭建 - ctrlands</title>
+<title>浏览器Cookie过期后未被自动删除分析 - ctrlands</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="google-site-verification" content="GBmm3kWsKUc_Gdhd8XuQOn6u83Fn_kF9aEdmI2nPOwA">
 
 
 
-    <meta name="description" content="具体安装步骤参考文档本文记录一下安装过程中遇到的一些问题.根据文档, 先安装相关依赖, Node(&amp;gt;=10.x), react-native-cli, Python(2.x), JDK(1.8), Android Studio.">
-<meta name="keywords" content="React Native">
+    <meta name="description" content="最近在做一个项目, 其中一个需求是用户登陆的时候可以记住密码, 有效时间内可以不用输入用户名和密码, 相关信息自动填充到输入框, 用户直接点击登陆就可以了. 我想到的第一个方法就是用cookie, 用户登陆校验成功后, 将用户的信息保存到cookie中.">
+<meta name="keywords" content="html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="React Native环境搭建">
-<meta property="og:url" content="http://ctrlands.com/2019/07/16/React-Native环境搭建/index.html">
+<meta property="og:title" content="浏览器Cookie过期后未被自动删除分析">
+<meta property="og:url" content="http://ctrlands.com/2019/08/30/浏览器Cookie过期后未被自动删除分析/index.html">
 <meta property="og:site_name" content="ctrlands">
-<meta property="og:description" content="具体安装步骤参考文档本文记录一下安装过程中遇到的一些问题.根据文档, 先安装相关依赖, Node(&amp;gt;=10.x), react-native-cli, Python(2.x), JDK(1.8), Android Studio.">
+<meta property="og:description" content="最近在做一个项目, 其中一个需求是用户登陆的时候可以记住密码, 有效时间内可以不用输入用户名和密码, 相关信息自动填充到输入框, 用户直接点击登陆就可以了. 我想到的第一个方法就是用cookie, 用户登陆校验成功后, 将用户的信息保存到cookie中.">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://ctrlands.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-07-16T04:02:30.352Z">
+<meta property="og:updated_time" content="2019-08-30T07:53:40.610Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="React Native环境搭建">
-<meta name="twitter:description" content="具体安装步骤参考文档本文记录一下安装过程中遇到的一些问题.根据文档, 先安装相关依赖, Node(&amp;gt;=10.x), react-native-cli, Python(2.x), JDK(1.8), Android Studio.">
+<meta name="twitter:title" content="浏览器Cookie过期后未被自动删除分析">
+<meta name="twitter:description" content="最近在做一个项目, 其中一个需求是用户登陆的时候可以记住密码, 有效时间内可以不用输入用户名和密码, 相关信息自动填充到输入框, 用户直接点击登陆就可以了. 我想到的第一个方法就是用cookie, 用户登陆校验成功后, 将用户的信息保存到cookie中.">
 <meta name="twitter:image" content="http://ctrlands.com/images/og_image.png">
 
 
@@ -99,7 +99,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="React Native环境搭建" height="28">
+                <img src="/images/logo.svg" alt="浏览器Cookie过期后未被自动删除分析" height="28">
             
             </a>
         </div>
@@ -153,17 +153,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-16T03:14:40.000Z">2019-07-16</time>
+                <time class="level-item has-text-grey" datetime="2019-08-30T07:01:07.000Z">2019-08-30</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/React-Native/">React Native</a>
+                <a class="has-link-grey -link" href="/categories/html/">html</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 338 个字)
+                    3 分钟 读完 (大约 452 个字)
                 </span>
                 
                 
@@ -177,20 +177,13 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                React Native环境搭建
+                浏览器Cookie过期后未被自动删除分析
             
         </h1>
         <div class="content">
-            <p>具体安装步骤<a href="https://reactnative.cn/docs/getting-started/" target="_blank" rel="noopener">参考文档</a><br>本文记录一下安装过程中遇到的一些问题.<br>根据文档, 先安装相关依赖, Node(&gt;=10.x), react-native-cli, Python(2.x), JDK(1.8), Android Studio. </p>
+            <p>最近在做一个项目, 其中一个需求是用户登陆的时候可以记住密码, 有效时间内可以不用输入用户名和密码, 相关信息自动填充到输入框, 用户直接点击登陆就可以了. 我想到的第一个方法就是用cookie, 用户登陆校验成功后, 将用户的信息保存到cookie中.</p>
 <a id="more"></a>
-
-<p>目前我的电脑上只有react-native-cli和Android Studio还未安装,所以先安装这两个依赖.</p>
-<h3 id="安装react-native-cli"><a href="#安装react-native-cli" class="headerlink" title="安装react-native-cli"></a>安装react-native-cli</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g react-native-cli</span><br></pre></td></tr></table></figure>
-
-<h3 id="安装Android-Studio"><a href="#安装Android-Studio" class="headerlink" title="安装Android Studio"></a>安装Android Studio</h3><p>安装AS时下载相关文件时需要翻墙, 我们可以曲线救国, 在<a href="http://ping.chinaz.com/dl.google.com" target="_blank" rel="noopener">chinaz</a>这个网站里面选取一个延迟较低的ip地址(文本发布时我使用的ip为203.208.40.97), 然后<code>C:\Windows\System32\drivers\etc</code>路径下找到<code>host</code>文件,添加203.208.40.97 dl.google.com, 然后就可以正常下载相关文件了.<br>第一次运行AS的时候会提示添加Proxy配置,我们因为修改了host,直接选择Auto就可以了.<br>当相关依赖都正常安装完成后, 创建RN项目<code>react-native init yourprojectname</code>,创建成功后运行<code>react-native run-android</code>,在运行的时候报错：</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">info Running jetifier to migrate libraries to AndroidX. You can <span class="hljs-built_in">disable</span> it using <span class="hljs-string">"--no-jetifier"</span> flag.</span><br><span class="line">error Failed to run jetifier. Run CLI with --verbose flag <span class="hljs-keyword">for</span> more details.</span><br><span class="line">Error: spawnSync C:\Users\LJ\Desktop\React\AwesomeProject\node_modules\jetifier\bin\jetify ENOENT</span><br></pre></td></tr></table></figure>
-
-<p>后来在github中project的issue中找到解决方案：<br><code>react-native run-android --no-jetifier</code></p>
+<p>可是后来发现超过设置的cookie的最大期限, cookie仍然存在浏览器中, 查询后才知道, cookie的设置时间与服务器的时间时区有关, 我们设置cookie的时候一般使用的是本地时间, 查看请求header里面可以看到data, 这个时间和本地时间不一样的, 我们设置的cookie时间是以服务器中的这个时间为准的.<br>eg：<br>注意图片箭头指示位置时间, 当前时间2019/8/30 15:32, 而我们生成的cookie的最大时间为2019/8/30 07:34:52<br><img src="/images/Cookie/set-client.png" alt="本地生成cookie"><br><br>这个时候已经超过了cookie的最大期限, 按理说它应该被浏览器自动清除了, 可是它还是存在, 这不恶心人吗. 我们再看下面这张图片<br><img src="/images/Cookie/set-server.png" alt="服务器时区"><br><br>这个是用户登陆请求的api信息, 我们可以看到箭头指示位置的时间, 本地时间是15:32, 而服务器的时间才07:32, 我设置cookie的时候, 时间设置的约2分钟, 刚好和cooke的最大时间07:34吻合,<br>如果这样的话, 本地时间为15:34的时候, cookie就应该被浏览器自动清除了.<br><img src="/images/Cookie/clear.png" alt="cookie到期"><br><br>如上图所示, 果不其然. 到了cookie的最大期限后, cookie便会被浏览器自动清除的.</p>
 
         </div>
         
@@ -198,7 +191,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/React-Native/">React Native</a>
+                    <a class="has-link-grey -link" href="/tags/html/">html</a>
                 </div>
             </div>
         </div>
@@ -244,17 +237,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/30/浏览器Cookie过期后未被自动删除分析/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">浏览器Cookie过期后未被自动删除分析</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/07/10/MAML-使用贝塞尔曲线绘制水波纹充电动画/">
-                <span class="level-item">MAML-使用贝塞尔曲线绘制水波纹充电动画</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/07/16/React-Native环境搭建/">
+                <span class="level-item">React Native环境搭建</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -266,7 +252,7 @@
 <!-- <aside id="article-toc" role="navigation" class="fixed">
   <div id="article-toc-inner">
       <strong class="sidebar-title">序：</strong>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装react-native-cli"><span class="toc-text">安装react-native-cli</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Android-Studio"><span class="toc-text">安装Android Studio</span></a></li></ol>
+      
   </div>
 </aside> -->
 
@@ -303,7 +289,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/" rel="external nofollow">
                     
-                    <img src="/images/logo.svg" alt="React Native环境搭建" height="28">
+                    <img src="/images/logo.svg" alt="浏览器Cookie过期后未被自动删除分析" height="28">
                     
                 </a>
                 <p class="is-size-7">
