@@ -2,25 +2,25 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>使用Electron将Vue项目打包为桌面应用-基础篇 - ctrlands</title>
+<title>Cordvoa+Vue基础环境搭建 - ctrlands</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="google-site-verification" content="GBmm3kWsKUc_Gdhd8XuQOn6u83Fn_kF9aEdmI2nPOwA">
 
 
 
-    <meta name="description" content="一天下午, 我正吹着空调, 带着耳机, 愉快的扮演着代码搬运工, 突然我的组长告诉我, 让我把一个vue项目打包成桌面应用. (ps: 啥, vue项目还能打包成桌面应用, 请自行脑补我的黑人脸问号), 后来组长发给我一条消息: Electron+Vue. 抱着try yi try的态度, 打开了搜索引擎, 跟着相关文档step by step, 哎哟, 不错哦, 还真阔以, 牛beer. 运行一">
-<meta name="keywords" content="Electron">
+    <meta name="description" content="安装Cordova1npm i -g cordova  这里不建议使用cnpm方式安装, 今天通过cnpm安装初始化项目的时候总是失败. 初始化Cordova项目1cordova create projectFileName packageName appName  for more info: 官方文档">
+<meta name="keywords" content="Cordvoa">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用Electron将Vue项目打包为桌面应用-基础篇">
-<meta property="og:url" content="http://ctrlands.com/2019/08/30/使用Electron将Vue项目打包为桌面应用-基础篇/index.html">
+<meta property="og:title" content="Cordvoa+Vue基础环境搭建">
+<meta property="og:url" content="http://ctrlands.com/2019/09/02/Cordova+Vue基础环境搭建/index.html">
 <meta property="og:site_name" content="ctrlands">
-<meta property="og:description" content="一天下午, 我正吹着空调, 带着耳机, 愉快的扮演着代码搬运工, 突然我的组长告诉我, 让我把一个vue项目打包成桌面应用. (ps: 啥, vue项目还能打包成桌面应用, 请自行脑补我的黑人脸问号), 后来组长发给我一条消息: Electron+Vue. 抱着try yi try的态度, 打开了搜索引擎, 跟着相关文档step by step, 哎哟, 不错哦, 还真阔以, 牛beer. 运行一">
+<meta property="og:description" content="安装Cordova1npm i -g cordova  这里不建议使用cnpm方式安装, 今天通过cnpm安装初始化项目的时候总是失败. 初始化Cordova项目1cordova create projectFileName packageName appName  for more info: 官方文档">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://ctrlands.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-08-30T09:56:21.418Z">
+<meta property="og:updated_time" content="2019-09-02T09:41:05.038Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用Electron将Vue项目打包为桌面应用-基础篇">
-<meta name="twitter:description" content="一天下午, 我正吹着空调, 带着耳机, 愉快的扮演着代码搬运工, 突然我的组长告诉我, 让我把一个vue项目打包成桌面应用. (ps: 啥, vue项目还能打包成桌面应用, 请自行脑补我的黑人脸问号), 后来组长发给我一条消息: Electron+Vue. 抱着try yi try的态度, 打开了搜索引擎, 跟着相关文档step by step, 哎哟, 不错哦, 还真阔以, 牛beer. 运行一">
+<meta name="twitter:title" content="Cordvoa+Vue基础环境搭建">
+<meta name="twitter:description" content="安装Cordova1npm i -g cordova  这里不建议使用cnpm方式安装, 今天通过cnpm安装初始化项目的时候总是失败. 初始化Cordova项目1cordova create projectFileName packageName appName  for more info: 官方文档">
 <meta name="twitter:image" content="http://ctrlands.com/images/og_image.png">
 
 
@@ -99,7 +99,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="使用Electron将Vue项目打包为桌面应用-基础篇" height="28">
+                <img src="/images/logo.svg" alt="Cordvoa+Vue基础环境搭建" height="28">
             
             </a>
         </div>
@@ -153,7 +153,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-30T08:02:44.000Z">2019-08-30</time>
+                <time class="level-item has-text-grey" datetime="2019-09-02T08:39:49.000Z">2019-09-02</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Vue/">Vue</a>
@@ -163,7 +163,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    7 分钟 读完 (大约 996 个字)
+                    4 分钟 读完 (大约 641 个字)
                 </span>
                 
                 
@@ -177,44 +177,55 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                使用Electron将Vue项目打包为桌面应用-基础篇
+                Cordvoa+Vue基础环境搭建
             
         </h1>
         <div class="content">
-            <p>一天下午, 我正吹着空调, 带着耳机, 愉快的扮演着代码搬运工, 突然我的组长告诉我, 让我把一个vue项目打包成桌面应用. (ps: 啥, vue项目还能打包成桌面应用, 请自行脑补我的黑人脸问号), 后来组长发给我一条消息: Electron+Vue. 抱着try yi try的态度, 打开了搜索引擎, 跟着相关文档step by step, 哎哟, 不错哦, 还真阔以, 牛beer. 运行一看, 居然还阔以f12, 再一看, 不就是那二锅头兑的那白开水嘛, 不好意思, 拿错剧本了, 不就是一个桌面应用的壳子套个浏览器嘛. 不过还是牛beer. 本着技多不压身(实之吾恐忘之), 特此以文档记之.</p>
+            <h4 id="安装Cordova"><a href="#安装Cordova" class="headerlink" title="安装Cordova"></a>安装Cordova</h4><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g cordova</span><br></pre></td></tr></table></figure>
+
+<p>这里不建议使用cnpm方式安装, 今天通过cnpm安装初始化项目的时候总是失败.</p>
+<h4 id="初始化Cordova项目"><a href="#初始化Cordova项目" class="headerlink" title="初始化Cordova项目"></a>初始化Cordova项目</h4><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cordova create projectFileName packageName appName</span><br></pre></td></tr></table></figure>
+
+<p>for more info: <a href="http://cordova.axuer.com/docs/zh-cn/latest/guide/cli/index.html" target="_blank" rel="noopener">官方文档</a></p>
 <a id="more"></a>
 
-<p>使用Electron将Vue项目打包成桌面应用有两种方式(就目前而言, 我就只知道这两种2333), 一种是将vue项目打包扔进Electron项目中, 另外一种就是在Vue项目引入Electron, 然后在Vue中打包为桌面应用. 话不多说, 开整.</p>
-<p>本文以第二种方式为例:</p>
+<h4 id="设置平台-已Android为例"><a href="#设置平台-已Android为例" class="headerlink" title="设置平台(已Android为例)"></a>设置平台(已Android为例)</h4><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cordova platfrom add android</span><br></pre></td></tr></table></figure>
+
+<h4 id="搭建Vue项目"><a href="#搭建Vue项目" class="headerlink" title="搭建Vue项目"></a>搭建Vue项目</h4><p>在cordova项目同级目录创建vue项目, 放在同级目录方便管理</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init webpack projectname</span><br></pre></td></tr></table></figure>
+
+<h3 id="Vue项目配置"><a href="#Vue项目配置" class="headerlink" title="Vue项目配置"></a>Vue项目配置</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">修改 projectname/config/index.js</span><br><span class="line">build: &#123;</span><br><span class="line">  // Template <span class="hljs-keyword">for</span> index.html</span><br><span class="line">  index: path.resolve(__dirname, <span class="hljs-string">'../../www/index.html'</span>),</span><br><span class="line"></span><br><span class="line">  // Paths</span><br><span class="line">  assetsRoot: path.resolve(__dirname, <span class="hljs-string">'../../www'</span>),</span><br><span class="line">  assetsSubDirectory: <span class="hljs-string">'./static'</span>,</span><br><span class="line">  assetsPublicPath: <span class="hljs-string">'./'</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Vue项目打包"><a href="#Vue项目打包" class="headerlink" title="Vue项目打包"></a>Vue项目打包</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+
+<p>项目打包完成后, 在cordova项目目录中的www文件夹里面会自动生成打包过后的文件</p>
+<h3 id="Cordova打包"><a href="#Cordova打包" class="headerlink" title="Cordova打包"></a>Cordova打包</h3><p>Cordova打包需要Android开发环境, 可参考<a href="http://www.ctrlands.com/2019/07/16/React-Native%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" target="_blank" rel="noopener">AndroidStudio环境搭建</a></p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cordova run build</span><br></pre></td></tr></table></figure>
+
+<p>执行命令后, 可能会遇到以下问题:</p>
 <ol>
-<li>先创建一个Electron-Vue项目</li>
+<li>下载gradle-4.10.3-all(以你的版本为准)失败<br>解决办法：根据提示的下载链接, 手动下载文件并解压, 然后放在(你的AndroidStudio安装文件位置)AndroidStudio/gradle/gradle-4.10.3/解压后的文件</li>
+<li>编译失败<br>如图所示:<br><img src="/images/Cordova/builderr.png" alt="编译失败"><br><br>解决办法：这个问题引起的原因是网络的问题, 正常情况下我们是无法访问谷歌的, 所以我们无法获取其资源. 因为我们可以借助相关软件访问谷歌的资源或者修改相关文件. 在</li>
 </ol>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init simulatedgreg/electron-vue yourprojectname</span><br></pre></td></tr></table></figure>
+<p><code>projectFileName/android/build.gradle, projectFileName/android/app/build.gradle, projectFileName/android/CordovaLib/build.gradle</code></p>
+<p>这几个文件中找到所有的 <code>repositories</code>, 修改为(添加maven)：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">repositories &#123;</span><br><span class="line">  jcenter()</span><br><span class="line">    maven &#123;</span><br><span class="line">      url &quot;http://maven.aliyun.com/nexus/content/groups/public/&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>Electron-Vue模板为我们封装好了相关Electron配置, 拿来即用. 然后根据自己需求选择配置, 打包方式我选的’builder’. 模板下载完成后, 进入文件, 下载相关依赖包. </p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install</span><br></pre></td></tr></table></figure>
+<p>打包成功的文件会放在<br><code>projectFileName/platforms/android/app/build/outputs/apk/debug/app-debug.apk</code></p>
+<h3 id="Cordova调试"><a href="#Cordova调试" class="headerlink" title="Cordova调试"></a>Cordova调试</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cordova run android</span><br></pre></td></tr></table></figure>
 
-<p><font color="#f03326">(重要: 不要使用npm, 使用cnpm, 原因: npm: 下载速度=树懒的速度, cnpm: 比npm的速度稍微快一点)</font>.因为一些Electron的相关依赖包在墙外, 使用npm有很大几率会下载失败, 当时我不知道, 使用的npm, 结果把我卡在这儿了, 这也下载失败, 那也下载失败, 忍不住想大吼一句ZnVjaw==相关依赖下载完成后, 运行</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+<p>我们可以通过数据线将手机连接电脑, 实现调试查看效果, 也可通过adb远程调试, 摆脱数据线的束缚.</p>
+<p>电脑和手机处于同一局域网, 现将手机通过数据线连接电脑, 打开控制窗口执行:</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">adb tcpip 5555</span><br><span class="line">adb connect your-Phone-Wifi-Ip:5555</span><br></pre></td></tr></table></figure>
 
-<p>就可以看到界面了. 大概就是下图的样子<br><img src="/images/Electron/index.png" alt="首页"><br><br>下方就是浏览器中的控制台.</p>
-<ol start="2">
-<li>打包Vue项目为桌面应用<br>打包命令为:<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+<p>连接成功后会提示</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connected to 192.168.1.xxx:5555</span><br></pre></td></tr></table></figure>
 
-</li>
-</ol>
-<p>执行命令后, 然后就会下载相关Electron的相关依赖包进行打包, 然而就在下载相关依赖包的时候问题就接踵而至了, 由于不可抗力因素原因, 我们无法通过cnpm方式下载相关依赖包, 所以我们需要手动去下载相关依赖包, 然后放在相关文件夹中. 需要的无法下载的相关依赖包我们可以在执行npm run build的时候看到.<br>需要的相关依赖包可能涉及到(以windows为例, 以你所需的Electron为准):</p>
-<p><code>electron-v2.0.18-win32-x64.zip</code></p>
-<p>可在这里下载<a href="https://npm.taobao.org/mirrors/electron/" target="_blank" rel="noopener">淘宝镜像站</a>, 或在这里下载<a href="https://github.com/electron/electron/releases" target="_blank" rel="noopener">官方git仓库</a><br>放在C:\Users\username\ .electron\electron-v2.0.18-win32-x64.zip(不需解压)<br>同时放在<br>C:\Users\username\AppData\Local\electron\Cache\electron-v2.0.18-win32-x64.zip(不需解压)</p>
-<p>所需文件</p>
-<p><code>nsis-3.0.3.2.7z nsis-resources-3.3.0.7z winCodeSign-2.4.0.7z app-builder-v0.6.1-x64.7z(可能需要)</code></p>
-<p>主路径: </p>
-<p><code>C:\Users\username\AppData\Local\electron-builder\Cache\</code></p>
-<p>C:\Users\username\AppData\Local\electron-builder\Cache\nsis\nsis-3.0.3.2.7z(需解压)<br>C:\Users\username\AppData\Local\electron-builder\Cache\nsis\nsis-resources-3.3.0.7z(需解压)<br>C:\Users\username\AppData\Local\electron-builder\Cache\winCodeSign\winCodeSign-2.4.0.7z(需解压)<br>C:\Users\username\AppData\Local\electron-builder\Cache\app-builder\app-builder-v0.6.1-x64.7z(可能需要, 需解压)</p>
-<p>文件结构如下:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">electron</span><br><span class="line">    Cache</span><br><span class="line">        electron-v2.0.18-win32-x64.zip</span><br><span class="line">        SHASUMS256.txt-2.0.18</span><br><span class="line">electron-builder</span><br><span class="line">    cache</span><br><span class="line">        app-builder</span><br><span class="line">            app-builder-v0.6.1-x64</span><br><span class="line">                解压app-builder-v0.6.1-x64.7z所得文件</span><br><span class="line">        nsis</span><br><span class="line">            nsis-3.0.3.2</span><br><span class="line">                解压nsis-3.0.3.2.7z所得文件</span><br><span class="line">            nsis-resources-3.3.0</span><br><span class="line">                解压nsis-resources-3.3.0.7z所得文件</span><br><span class="line">        winCodeSign</span><br><span class="line">            winCodeSign-2.4.0</span><br><span class="line">                解压winCodeSign-2.4.0.7z所得文件</span><br></pre></td></tr></table></figure>
+<p>此时就可以拔掉数据线了, 此时就可以通过</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cordova run android</span><br></pre></td></tr></table></figure>
 
-<p>相关依赖包下载安装完成后, 就等打包, 打包完成后的文件放在项目根目录/dist文件下.<br><img src="/images/Electron/build.png" alt="打包完成的桌面应用文件"><br><br>图中箭头指示的就是打包完成的桌面应用文件.</p>
+<p>直接调试了.</p>
+<h3 id="查看控制台"><a href="#查看控制台" class="headerlink" title="查看控制台"></a>查看控制台</h3><p>打开谷歌浏览器, 地址栏输入: <code>chrome://inspect/#devices</code>, 在这个界面你可以看到运行的项目, 点击 <code>inspectinspect</code> 或者 <code>fallback</code> 就可以看到控制台了.</p>
 
         </div>
         
@@ -222,7 +233,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/Electron/">Electron</a>
+                    <a class="has-link-grey -link" href="/tags/Cordvoa/">Cordvoa</a>
                 </div>
             </div>
         </div>
@@ -268,17 +279,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/09/02/Cordova+Vue基础环境搭建/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Cordvoa+Vue基础环境搭建</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/30/浏览器Cookie过期后未被自动删除分析/">
-                <span class="level-item">浏览器Cookie过期后未被自动删除分析</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/30/使用Electron将Vue项目打包为桌面应用-基础篇/">
+                <span class="level-item">使用Electron将Vue项目打包为桌面应用-基础篇</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -290,8 +294,8 @@
 <!-- <aside id="article-toc" role="navigation" class="fixed">
   <div id="article-toc-inner">
       <strong class="sidebar-title">序：</strong>
-      
-  </div>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装Cordova"><span class="toc-text">安装Cordova</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#初始化Cordova项目"><span class="toc-text">初始化Cordova项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置平台-已Android为例"><span class="toc-text">设置平台(已Android为例)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#搭建Vue项目"><span class="toc-text">搭建Vue项目</span></a></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#Vue项目配置"><span class="toc-text">Vue项目配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vue项目打包"><span class="toc-text">Vue项目打包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cordova打包"><span class="toc-text">Cordova打包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cordova调试"><span class="toc-text">Cordova调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看控制台"><span class="toc-text">查看控制台</span></a>
+  </li></div>
 </aside> -->
 
 
@@ -327,7 +331,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/" rel="external nofollow">
                     
-                    <img src="/images/logo.svg" alt="使用Electron将Vue项目打包为桌面应用-基础篇" height="28">
+                    <img src="/images/logo.svg" alt="Cordvoa+Vue基础环境搭建" height="28">
                     
                 </a>
                 <p class="is-size-7">
