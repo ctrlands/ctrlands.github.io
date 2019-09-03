@@ -17,7 +17,7 @@
 <meta property="og:description" content="安装Cordova1npm i -g cordova  这里不建议使用cnpm方式安装, 今天通过cnpm安装初始化项目的时候总是失败. 初始化Cordova项目1cordova create projectFileName packageName appName  for more info: 官方文档">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://ctrlands.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-09-02T09:41:05.038Z">
+<meta property="og:updated_time" content="2019-09-03T01:32:31.639Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cordvoa+Vue基础环境搭建">
 <meta name="twitter:description" content="安装Cordova1npm i -g cordova  这里不建议使用cnpm方式安装, 今天通过cnpm安装初始化项目的时候总是失败. 初始化Cordova项目1cordova create projectFileName packageName appName  for more info: 官方文档">
@@ -163,7 +163,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 641 个字)
+                    5 分钟 读完 (大约 795 个字)
                 </span>
                 
                 
@@ -207,7 +207,7 @@
 <li>下载gradle-4.10.3-all(以你的版本为准)失败<br>解决办法：根据提示的下载链接, 手动下载文件并解压, 然后放在(你的AndroidStudio安装文件位置)AndroidStudio/gradle/gradle-4.10.3/解压后的文件</li>
 <li>编译失败<br>如图所示:<br><img src="/images/Cordova/builderr.png" alt="编译失败"><br><br>解决办法：这个问题引起的原因是网络的问题, 正常情况下我们是无法访问谷歌的, 所以我们无法获取其资源. 因为我们可以借助相关软件访问谷歌的资源或者修改相关文件. 在</li>
 </ol>
-<p><code>projectFileName/android/build.gradle, projectFileName/android/app/build.gradle, projectFileName/android/CordovaLib/build.gradle</code></p>
+<p><code>projectFileName/platforms/android/build.gradle, projectFileName/platforms/android/app/build.gradle, projectFileName/platforms/android/CordovaLib/build.gradle</code></p>
 <p>这几个文件中找到所有的 <code>repositories</code>, 修改为(添加maven)：</p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">repositories &#123;</span><br><span class="line">  jcenter()</span><br><span class="line">    maven &#123;</span><br><span class="line">      url &quot;http://maven.aliyun.com/nexus/content/groups/public/&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -226,7 +226,11 @@
 
 <p>直接调试了.</p>
 <h3 id="查看控制台"><a href="#查看控制台" class="headerlink" title="查看控制台"></a>查看控制台</h3><p>打开谷歌浏览器, 地址栏输入: <code>chrome://inspect/#devices</code>, 在这个界面你可以看到运行的项目, 点击 <code>inspectinspect</code> 或者 <code>fallback</code> 就可以看到控制台了.</p>
-
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ol>
+<li>在Cordova中不会出现跨域的情况, 因此我们可以直接访问. eg: 我们之前的访问接口为: <code>http://localhost:8080/xxx</code>, 现在就可以直接用<a href="http://192.168.1.xx:8080/xxx进行访问" target="_blank" rel="noopener">http://192.168.1.xx:8080/xxx进行访问</a>.</li>
+<li>当我们使用http进行访问的时候, 可能会遇到访问失败的情况, 提示 <code>net::ERR_CLEARTEXT_NOT_PERMITTED</code>, 原因是从Android 6.0开始引入了对Https的推荐支持, 与以往不同, Android P的系统上面默认所有Http的请求都被阻止了.<br>解决办法: 修改 <code>projectFileName/platforms/android/app/src/main/AndroidManifest.xml</code>, 在 <code>&lt;application&gt;&lt;/application&gt;</code> 添加 <code>android:usesCleartextTraffic=&quot;true&quot;</code>, 修改为</li>
+</ol>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;application android:hardwareAccelerated=<span class="hljs-string">"true"</span> android:icon=<span class="hljs-string">"@mipmap/ic_launcher"</span> android:label=<span class="hljs-string">"@string/app_name"</span> android:supportsRtl=<span class="hljs-string">"true"</span> android:usesCleartextTraffic=<span class="hljs-string">"true"</span>&gt;</span><br></pre></td></tr></table></figure>
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -294,7 +298,7 @@
 <!-- <aside id="article-toc" role="navigation" class="fixed">
   <div id="article-toc-inner">
       <strong class="sidebar-title">序：</strong>
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装Cordova"><span class="toc-text">安装Cordova</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#初始化Cordova项目"><span class="toc-text">初始化Cordova项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置平台-已Android为例"><span class="toc-text">设置平台(已Android为例)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#搭建Vue项目"><span class="toc-text">搭建Vue项目</span></a></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#Vue项目配置"><span class="toc-text">Vue项目配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vue项目打包"><span class="toc-text">Vue项目打包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cordova打包"><span class="toc-text">Cordova打包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cordova调试"><span class="toc-text">Cordova调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看控制台"><span class="toc-text">查看控制台</span></a>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装Cordova"><span class="toc-text">安装Cordova</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#初始化Cordova项目"><span class="toc-text">初始化Cordova项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置平台-已Android为例"><span class="toc-text">设置平台(已Android为例)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#搭建Vue项目"><span class="toc-text">搭建Vue项目</span></a></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#Vue项目配置"><span class="toc-text">Vue项目配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vue项目打包"><span class="toc-text">Vue项目打包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cordova打包"><span class="toc-text">Cordova打包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cordova调试"><span class="toc-text">Cordova调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看控制台"><span class="toc-text">查看控制台</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他"><span class="toc-text">其他</span></a>
   </li></div>
 </aside> -->
 

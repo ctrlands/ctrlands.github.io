@@ -17,7 +17,7 @@
 <meta property="og:description" content="一天下午, 我正吹着空调, 带着耳机, 愉快的扮演着代码搬运工, 突然我的组长告诉我, 让我把一个vue项目打包成桌面应用. (ps: 啥, vue项目还能打包成桌面应用, 请自行脑补我的黑人脸问号), 后来组长发给我一条消息: Electron+Vue. 抱着try yi try的态度, 打开了搜索引擎, 跟着相关文档step by step, 哎哟, 不错哦, 还真阔以, 牛beer. 运行一">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://ctrlands.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-08-30T09:56:21.418Z">
+<meta property="og:updated_time" content="2019-09-03T01:49:48.966Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Electron将Vue项目打包为桌面应用-基础篇">
 <meta name="twitter:description" content="一天下午, 我正吹着空调, 带着耳机, 愉快的扮演着代码搬运工, 突然我的组长告诉我, 让我把一个vue项目打包成桌面应用. (ps: 啥, vue项目还能打包成桌面应用, 请自行脑补我的黑人脸问号), 后来组长发给我一条消息: Electron+Vue. 抱着try yi try的态度, 打开了搜索引擎, 跟着相关文档step by step, 哎哟, 不错哦, 还真阔以, 牛beer. 运行一">
@@ -163,7 +163,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    7 分钟 读完 (大约 996 个字)
+                    7 分钟 读完 (大约 1068 个字)
                 </span>
                 
                 
@@ -186,10 +186,7 @@
 
 <p>使用Electron将Vue项目打包成桌面应用有两种方式(就目前而言, 我就只知道这两种2333), 一种是将vue项目打包扔进Electron项目中, 另外一种就是在Vue项目引入Electron, 然后在Vue中打包为桌面应用. 话不多说, 开整.</p>
 <p>本文以第二种方式为例:</p>
-<ol>
-<li>先创建一个Electron-Vue项目</li>
-</ol>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init simulatedgreg/electron-vue yourprojectname</span><br></pre></td></tr></table></figure>
+<h3 id="先创建一个Electron-Vue项目"><a href="#先创建一个Electron-Vue项目" class="headerlink" title="先创建一个Electron-Vue项目"></a>先创建一个Electron-Vue项目</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init simulatedgreg/electron-vue yourprojectname</span><br></pre></td></tr></table></figure>
 
 <p>Electron-Vue模板为我们封装好了相关Electron配置, 拿来即用. 然后根据自己需求选择配置, 打包方式我选的’builder’. 模板下载完成后, 进入文件, 下载相关依赖包. </p>
 <figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install</span><br></pre></td></tr></table></figure>
@@ -198,11 +195,9 @@
 <figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
 
 <p>就可以看到界面了. 大概就是下图的样子<br><img src="/images/Electron/index.png" alt="首页"><br><br>下方就是浏览器中的控制台.</p>
-<ol start="2">
-<li>打包Vue项目为桌面应用<br>打包命令为:<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+<h3 id="打包Vue项目为桌面应用"><a href="#打包Vue项目为桌面应用" class="headerlink" title="打包Vue项目为桌面应用"></a>打包Vue项目为桌面应用</h3><p>打包命令为:</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
 
-</li>
-</ol>
 <p>执行命令后, 然后就会下载相关Electron的相关依赖包进行打包, 然而就在下载相关依赖包的时候问题就接踵而至了, 由于不可抗力因素原因, 我们无法通过cnpm方式下载相关依赖包, 所以我们需要手动去下载相关依赖包, 然后放在相关文件夹中. 需要的无法下载的相关依赖包我们可以在执行npm run build的时候看到.<br>需要的相关依赖包可能涉及到(以windows为例, 以你所需的Electron为准):</p>
 <p><code>electron-v2.0.18-win32-x64.zip</code></p>
 <p>可在这里下载<a href="https://npm.taobao.org/mirrors/electron/" target="_blank" rel="noopener">淘宝镜像站</a>, 或在这里下载<a href="https://github.com/electron/electron/releases" target="_blank" rel="noopener">官方git仓库</a><br>放在C:\Users\username\ .electron\electron-v2.0.18-win32-x64.zip(不需解压)<br>同时放在<br>C:\Users\username\AppData\Local\electron\Cache\electron-v2.0.18-win32-x64.zip(不需解压)</p>
@@ -215,6 +210,11 @@
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">electron</span><br><span class="line">    Cache</span><br><span class="line">        electron-v2.0.18-win32-x64.zip</span><br><span class="line">        SHASUMS256.txt-2.0.18</span><br><span class="line">electron-builder</span><br><span class="line">    cache</span><br><span class="line">        app-builder</span><br><span class="line">            app-builder-v0.6.1-x64</span><br><span class="line">                解压app-builder-v0.6.1-x64.7z所得文件</span><br><span class="line">        nsis</span><br><span class="line">            nsis-3.0.3.2</span><br><span class="line">                解压nsis-3.0.3.2.7z所得文件</span><br><span class="line">            nsis-resources-3.3.0</span><br><span class="line">                解压nsis-resources-3.3.0.7z所得文件</span><br><span class="line">        winCodeSign</span><br><span class="line">            winCodeSign-2.4.0</span><br><span class="line">                解压winCodeSign-2.4.0.7z所得文件</span><br></pre></td></tr></table></figure>
 
 <p>相关依赖包下载安装完成后, 就等打包, 打包完成后的文件放在项目根目录/dist文件下.<br><img src="/images/Electron/build.png" alt="打包完成的桌面应用文件"><br><br>图中箭头指示的就是打包完成的桌面应用文件.</p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ol>
+<li>跨域问题<br>修改 <code>yourprojectname/.electron-vue/dev-runner.js</code>, 添加一下内容:</li>
+</ol>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const httpProxyMiddleware = require(<span class="hljs-string">'http-proxy-middleware'</span>)</span><br><span class="line"><span class="hljs-keyword">function</span> <span class="hljs-function"><span class="hljs-title">startRenderer</span></span> () &#123;</span><br><span class="line">    <span class="hljs-built_in">return</span> new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">        <span class="hljs-comment"># target为跨域的访问接口地址, eg: 后台接口为: http://localhost:8999/getuser, 在vue中我们使用/getuser即可</span></span><br><span class="line">        server.use(httpProxyMiddleware(&#123;</span><br><span class="line">            target: <span class="hljs-string">'http://localhost:8999'</span>,</span><br><span class="line">            changeOrigin: <span class="hljs-literal">true</span></span><br><span class="line">        &#125;))</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
         </div>
         
@@ -290,7 +290,7 @@
 <!-- <aside id="article-toc" role="navigation" class="fixed">
   <div id="article-toc-inner">
       <strong class="sidebar-title">序：</strong>
-      
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#先创建一个Electron-Vue项目"><span class="toc-text">先创建一个Electron-Vue项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#打包Vue项目为桌面应用"><span class="toc-text">打包Vue项目为桌面应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他"><span class="toc-text">其他</span></a></li></ol>
   </div>
 </aside> -->
 
