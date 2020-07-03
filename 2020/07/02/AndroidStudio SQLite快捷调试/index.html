@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>Android Studio SQLite快捷调试 - ctrlands</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="google-site-verification" content="GBmm3kWsKUc_Gdhd8XuQOn6u83Fn_kF9aEdmI2nPOwA">
+
+
+
+    <meta name="description" content="WHY最近在做cordova &amp;amp; vue 混合开发的时候, 部分数据需要储存在本地数据库(SQLite). 每次调试的时候感觉特别麻烦, 通过真机调试的话, 手机又需要root后才能查看到数据库里面的内容, 后来搜索相关文档后发现通过Android Studio的模拟器 + SQLiteStudio就可以快捷的查看数据内容.">
+<meta name="keywords" content="Cordvoa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android Studio SQLite快捷调试">
+<meta property="og:url" content="http://ctrlands.com/2020/07/02/AndroidStudio SQLite快捷调试/index.html">
+<meta property="og:site_name" content="ctrlands">
+<meta property="og:description" content="WHY最近在做cordova &amp;amp; vue 混合开发的时候, 部分数据需要储存在本地数据库(SQLite). 每次调试的时候感觉特别麻烦, 通过真机调试的话, 手机又需要root后才能查看到数据库里面的内容, 后来搜索相关文档后发现通过Android Studio的模拟器 + SQLiteStudio就可以快捷的查看数据内容.">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://ctrlands.com/images/og_image.png">
+<meta property="og:updated_time" content="2020-07-03T02:35:55.942Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android Studio SQLite快捷调试">
+<meta name="twitter:description" content="WHY最近在做cordova &amp;amp; vue 混合开发的时候, 部分数据需要储存在本地数据库(SQLite). 每次调试的时候感觉特别麻烦, 通过真机调试的话, 手机又需要root后才能查看到数据库里面的内容, 后来搜索相关文档后发现通过Android Studio的模拟器 + SQLiteStudio就可以快捷的查看数据内容.">
+<meta name="twitter:image" content="http://ctrlands.com/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="Android Studio SQLite快捷调试" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                    <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-07-02T09:48:33.000Z">2020-07-02</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Vue/">Vue</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 分钟 读完 (大约 592 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                Android Studio SQLite快捷调试
+            
+        </h1>
+        <div class="content">
+            <h4 id="WHY"><a href="#WHY" class="headerlink" title="WHY"></a>WHY</h4><p>最近在做cordova &amp; vue 混合开发的时候, 部分数据需要储存在本地数据库(SQLite). 每次调试的时候感觉特别麻烦, 通过真机调试的话, 手机又需要root后才能查看到数据库里面的内容, 后来搜索相关文档后发现通过Android Studio的模拟器 + SQLiteStudio就可以快捷的查看数据内容.</p>
+<a id="more"></a>
+
+<h4 id="SQLiteStudio"><a href="#SQLiteStudio" class="headerlink" title="SQLiteStudio"></a>SQLiteStudio</h4><p>进入<a href="https://sqlitestudio.pl/" target="_blank" rel="noopener">SQLiteStudio</a>官网下载工具, 下载后解压直接运行 <code>SQLiteStudio.exe</code> 打开.</p>
+<ol>
+<li><p>点击菜单栏中的 工具(tools)-打开配置对话框(Open configuration dialog), 在弹窗内容中找到 <code>Android SQLite</code>, 将其打勾并确认.<br><img src="/images/Cordova/Android-SQLite.png" alt="Android SQLite配置"></p>
+</li>
+<li><p>在cordova项目中找到 <code>yourproject/platforms/android/app/src/main/AndroidManifest.xml</code> 打开添加内容 <code>&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;</code></p>
+</li>
+<li><p>点击菜单栏中的 工具(tools)-Get Android Connector Jar file, 选择 <code>yourproject/platforms/android/app/libs</code> 确认.<br><img src="/images/Cordova/Get-Android-Connector-Jar-file.png" alt="Get AndroidConnector Jar file配置"></p>
+</li>
+<li><p>打开Android Studio, 在项目位置处右键找到 <code>Open Module Settings</code>, 点击 <code>Dependencies</code> 点击 ‘+’ 号添加, 选择 <code>Jar Dependency</code>, 然后在step1的下拉弹窗内容中选择 <code>libs\SQLiteStudioRemote.jar</code>, 然后点击ok-apply.<br><img src="/images/Cordova/Add-SQLite-jar.png" alt="项目添加SQLite jar"></p>
+</li>
+<li><p>找到项目入口文件 <code>MainActivity.java</code>, 添加内容 <code>SQLiteStudioService.instance().start(this);</code><br><img src="/images/Cordova/Add-SQLite-Code.png" alt="项目添加启动代码"></p>
+</li>
+</ol>
+<h4 id="模拟器调试"><a href="#模拟器调试" class="headerlink" title="模拟器调试"></a>模拟器调试</h4><ol>
+<li><p>在模拟器中运行项目, 打开Android Studio的<code>AVD Manager</code>, 选择需要运行的模拟器, 在actions的下拉框中选择 <code>Cold Boot Now</code>, 等待模拟器开机, 然后在cordova项目根文件中执行<code>cordova emulate android</code>.</p>
+</li>
+<li><p>打开SQLiteStudio, 点击菜单栏中的 数据库(Database)-添加数据库(Add a Database), 数据类型选择 <code>Android SQLite</code>, 然后在Device中选取运行中的模拟器, 确认.<br><img src="/images/Cordova/SQLite-database-1.png" alt="选择Android SQLite"><br><img src="/images/Cordova/SQLite-database-2.png" alt="选择模拟器"></p>
+</li>
+<li><p>在SQLiteStudio首页左侧就可以看到正在使用的数据库了.<br><img src="/images/Cordova/SQLite-database.png" alt="查看数据"></p>
+</li>
+</ol>
+<h3 id="在Android-Studio中查看项目的SQLite文件"><a href="#在Android-Studio中查看项目的SQLite文件" class="headerlink" title="在Android Studio中查看项目的SQLite文件"></a>在Android Studio中查看项目的SQLite文件</h3><ol>
+<li>在Android Studio中打开Cordova项目, 待项目依赖文件加载完成, 运行(调试)项目后, 点击菜单栏中的 <code>View - Tool Windows - Device File Explorer</code>, <code>data/data/yourpackage name/databases</code>这个文件加里面就是存放的数据库文件, 可以右键将其保存到其他路径用SQLiteStudio进行查看.<br><img src="/images/Cordova/Android-Studio-SQL-file.png" alt="sql文件"></li>
+</ol>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Cordvoa/">Cordvoa</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<div class="notification is-danger">
+    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/07/03/hexo+githubPage搭建/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">hexo + github page 搭建</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/09/29/前后端项目分离-服务器端部署/">
+                <span class="level-item">前后端项目分离-服务器端部署</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+<!-- <aside id="article-toc" role="navigation" class="fixed">
+  <div id="article-toc-inner">
+      <strong class="sidebar-title">序：</strong>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#WHY"><span class="toc-text">WHY</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SQLiteStudio"><span class="toc-text">SQLiteStudio</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#模拟器调试"><span class="toc-text">模拟器调试</span></a></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#在Android-Studio中查看项目的SQLite文件"><span class="toc-text">在Android Studio中查看项目的SQLite文件</span></a>
+  </li></div>
+</aside> -->
+
+</div>
+                
+            </div>
+        </div>
+    </section>
+ 
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/" rel="external nofollow">
+                    
+                    <img src="/images/logo.svg" alt="Android Studio SQLite快捷调试" height="28">
+                    
+                </a>
+                <p class="is-size-7">
+                    &copy; 2020 ctrlands&nbsp;
+                    Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                    
+                </p>
+            </div>
+            <div class="level-end">
+                
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                    
+                    
+                    <p class="control">
+                        <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/" rel="external nofollow">
+                            
+                            <i class="fab fa-creative-commons"></i>
+                            
+                        </a>
+                    </p>
+                    
+                    <p class="control">
+                        <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/" rel="external nofollow">
+                            
+                            <i class="fab fa-creative-commons-by"></i>
+                            
+                        </a>
+                    </p>
+                    
+                    <p class="control">
+                        <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus" rel="external nofollow">
+                            
+                            <i class="fab fa-github"></i>
+                            
+                        </a>
+                    </p>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

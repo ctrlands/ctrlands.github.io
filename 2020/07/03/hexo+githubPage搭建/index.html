@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>hexo + github page 搭建 - ctrlands</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="google-site-verification" content="GBmm3kWsKUc_Gdhd8XuQOn6u83Fn_kF9aEdmI2nPOwA">
+
+
+
+    <meta name="description" content="安装环境前提：Node + Git I. hexo安装1. 使用npm安装hexo1npm install -g hexo-cli">
+<meta name="keywords" content="ctrlands,miui主题,web前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo + github page 搭建">
+<meta property="og:url" content="http://ctrlands.com/2020/07/03/hexo+githubPage搭建/index.html">
+<meta property="og:site_name" content="ctrlands">
+<meta property="og:description" content="安装环境前提：Node + Git I. hexo安装1. 使用npm安装hexo1npm install -g hexo-cli">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://ctrlands.com/images/og_image.png">
+<meta property="og:updated_time" content="2020-07-03T01:33:51.224Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo + github page 搭建">
+<meta name="twitter:description" content="安装环境前提：Node + Git I. hexo安装1. 使用npm安装hexo1npm install -g hexo-cli">
+<meta name="twitter:image" content="http://ctrlands.com/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="hexo + github page 搭建" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                    <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-07-03T01:33:51.224Z">2020-07-03</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/hexo/">hexo</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 分钟 读完 (大约 587 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                hexo + github page 搭建
+            
+        </h1>
+        <div class="content">
+            <p>安装环境前提：Node + Git</p>
+<h2 id="I-hexo安装"><a href="#I-hexo安装" class="headerlink" title="I. hexo安装"></a>I. hexo安装</h2><h3 id="1-使用npm安装hexo"><a href="#1-使用npm安装hexo" class="headerlink" title="1. 使用npm安装hexo"></a>1. 使用npm安装hexo</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h3 id="2-hexo初始化"><a href="#2-hexo初始化" class="headerlink" title="2. hexo初始化"></a>2. hexo初始化</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init folderName</span><br><span class="line"><span class="hljs-built_in">cd</span> folderName</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/HexoGithubPageBuild/hexo-init.png" alt="hexo 初始化"></p>
+<h3 id="3-启动服务"><a href="#3-启动服务" class="headerlink" title="3. 启动服务"></a>3. 启动服务</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/HexoGithubPageBuild/hexo-server-cmd.png" alt="hexo 服务启动"><br>浏览器输入地址：localhost:4000查看.<br><img src="/images/HexoGithubPageBuild/hexo-server-img.png" alt="hexo 服务启动"></p>
+<h3 id="4-github-page"><a href="#4-github-page" class="headerlink" title="4. github page"></a>4. github page</h3><p>git上新建仓库, 项目名为： yourusername.github.io, 记住仓库的地址后面需要部署到这个仓库里面来.</p>
+<h3 id="5-配置git"><a href="#5-配置git" class="headerlink" title="5. 配置git"></a>5. 配置git</h3><p><strong><em>根目录/_config.yml</em></strong></p>
+<figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repository: https://github.com/ctrlands/ctrlands.github.io.git</span><br><span class="line">    branch: master</span><br><span class="line">    message: message</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>了解更多：<a href="https://hexo.io/zh-cn/docs/deployment" target="_blank" rel="noopener">hexo deploy</a></p>
+<h3 id="6-更换主题"><a href="#6-更换主题" class="headerlink" title="6. 更换主题"></a>6. 更换主题</h3><p>选择自己喜欢的主题下载，然后将主题文件放在 <strong><em>根目录/themes</em></strong> 文件下，默认主题(landspace)可删掉.<br>然后在 <strong><em>根目录/_config.yml</em></strong></p>
+<figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  theme: hexo-theme-icarus</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/HexoGithubPageBuild/hexo-theme.png" alt="hexo 更换主题"><br>查看更多主题：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo theme</a></p>
+<h3 id="7-生成静态页面"><a href="#7-生成静态页面" class="headerlink" title="7. 生成静态页面"></a>7. 生成静态页面</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>可简写为:</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/HexoGithubPageBuild/hexo-generate.png" alt="hexo generate"><br>生成的文件位于 <strong><em>根目录/Public</em></strong> 文件夹里面.</p>
+<h3 id="8-部署"><a href="#8-部署" class="headerlink" title="8. 部署"></a>8. 部署</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>可简写为:</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/HexoGithubPageBuild/hexo-deploy.png" alt="hexo deploy"><br>若遇到提示：ERROR: Deployer not fonud git.<br>执行命令安装：<br><code>npm install hexo-deployer-git --save</code><br>安装成功后初次提交会输入用户名和密码, 若不想每次提交输入验证, 需添加ssh key, <a href="https://www.liaoxuefeng.com/wiki/896043488029600/896954117292416" target="_blank" rel="noopener">git添加ssh key</a></p>
+<h3 id="9-域名解析"><a href="#9-域名解析" class="headerlink" title="9. 域名解析"></a>9. 域名解析</h3><p>在 <strong><em>根目录/themes/your theme/source</em></strong> 根目录中添加CNAME文件,无任何后缀名，文件内容为你的域名(eg: <a href="http://www.ctrlands.com" target="_blank" rel="noopener">www.ctrlands.com</a>).</p>
+<h2 id="Ⅱ-域名解析绑定"><a href="#Ⅱ-域名解析绑定" class="headerlink" title="Ⅱ. 域名解析绑定"></a>Ⅱ. 域名解析绑定</h2><p>在域名提供商控制台页面添加域名解析记录：<br>        记录类型选CNAME<br>        记录值填username.github.io.<br><img src="/images/HexoGithubPageBuild/domain.png" alt="hexo deploy"></p>
+<h2 id="Ⅲ-其他"><a href="#Ⅲ-其他" class="headerlink" title="Ⅲ. 其他"></a>Ⅲ. 其他</h2><p>hexo中的 <strong><em>根目录/_config.yml</em></strong> 为站点<strong>配置文件</strong>.<br><br><strong><em>根目录/theme/downloadTheme</em></strong> 中的_config.yml为<strong>主题配置文件</strong>.<br><br>设置语言为中文：修改 站点配置文件 中的 language: zh-Hans,若未生效，将主题配置文件language文件中的zh-CN.yml改为zh-Hans.yml.<br><br>hexo deploy时添加自定义commit信息：</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d -message <span class="hljs-string">"the info of commit"</span></span><br></pre></td></tr></table></figure>
+
+<p>可简写为：</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d -m <span class="hljs-string">"the info of commit"</span></span><br></pre></td></tr></table></figure>
+
+<p>新建文档并上传流程:</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="hljs-string">'document name'</span></span><br><span class="line">hexo generate</span><br><span class="line">hexo d -m <span class="hljs-string">'commit message'</span></span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<div class="notification is-danger">
+    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/07/02/AndroidStudio SQLite快捷调试/">
+                <span class="level-item">Android Studio SQLite快捷调试</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+<!-- <aside id="article-toc" role="navigation" class="fixed">
+  <div id="article-toc-inner">
+      <strong class="sidebar-title">序：</strong>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#I-hexo安装"><span class="toc-text">I. hexo安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-使用npm安装hexo"><span class="toc-text">1. 使用npm安装hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-hexo初始化"><span class="toc-text">2. hexo初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-启动服务"><span class="toc-text">3. 启动服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-github-page"><span class="toc-text">4. github page</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-配置git"><span class="toc-text">5. 配置git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-更换主题"><span class="toc-text">6. 更换主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-生成静态页面"><span class="toc-text">7. 生成静态页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-部署"><span class="toc-text">8. 部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-域名解析"><span class="toc-text">9. 域名解析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ⅱ-域名解析绑定"><span class="toc-text">Ⅱ. 域名解析绑定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ⅲ-其他"><span class="toc-text">Ⅲ. 其他</span></a></li></ol>
+  </div>
+</aside> -->
+
+</div>
+                
+            </div>
+        </div>
+    </section>
+ 
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/" rel="external nofollow">
+                    
+                    <img src="/images/logo.svg" alt="hexo + github page 搭建" height="28">
+                    
+                </a>
+                <p class="is-size-7">
+                    &copy; 2020 ctrlands&nbsp;
+                    Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                    
+                </p>
+            </div>
+            <div class="level-end">
+                
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                    
+                    
+                    <p class="control">
+                        <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/" rel="external nofollow">
+                            
+                            <i class="fab fa-creative-commons"></i>
+                            
+                        </a>
+                    </p>
+                    
+                    <p class="control">
+                        <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/" rel="external nofollow">
+                            
+                            <i class="fab fa-creative-commons-by"></i>
+                            
+                        </a>
+                    </p>
+                    
+                    <p class="control">
+                        <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus" rel="external nofollow">
+                            
+                            <i class="fab fa-github"></i>
+                            
+                        </a>
+                    </p>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>前后端项目分离-服务器端部署 - ctrlands</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="google-site-verification" content="GBmm3kWsKUc_Gdhd8XuQOn6u83Fn_kF9aEdmI2nPOwA">
+
+
+
+    <meta name="description" content="项目基本环境: 前端使用Vue, 后端使用SpingBoot + Maven管理, 服务器端使用Nginx代理 项目打包 后端用的Ide开发工具, 在ide右侧Maven Projects工具栏中打开maven管理, 先执行 clean, 然后执行 package, 完成打包, 打包完成的文件(一个zip包)在target文件下.  Vue项目打包, 执行 npm run build 即可完成项目">
+<meta name="keywords" content="服务器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前后端项目分离-服务器端部署">
+<meta property="og:url" content="http://ctrlands.com/2019/09/29/前后端项目分离-服务器端部署/index.html">
+<meta property="og:site_name" content="ctrlands">
+<meta property="og:description" content="项目基本环境: 前端使用Vue, 后端使用SpingBoot + Maven管理, 服务器端使用Nginx代理 项目打包 后端用的Ide开发工具, 在ide右侧Maven Projects工具栏中打开maven管理, 先执行 clean, 然后执行 package, 完成打包, 打包完成的文件(一个zip包)在target文件下.  Vue项目打包, 执行 npm run build 即可完成项目">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://ctrlands.com/images/og_image.png">
+<meta property="og:updated_time" content="2020-07-03T01:33:51.224Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前后端项目分离-服务器端部署">
+<meta name="twitter:description" content="项目基本环境: 前端使用Vue, 后端使用SpingBoot + Maven管理, 服务器端使用Nginx代理 项目打包 后端用的Ide开发工具, 在ide右侧Maven Projects工具栏中打开maven管理, 先执行 clean, 然后执行 package, 完成打包, 打包完成的文件(一个zip包)在target文件下.  Vue项目打包, 执行 npm run build 即可完成项目">
+<meta name="twitter:image" content="http://ctrlands.com/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="前后端项目分离-服务器端部署" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                    <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-09-29T03:24:37.000Z">2019-09-29</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Server/">Server</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 分钟 读完 (大约 617 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                前后端项目分离-服务器端部署
+            
+        </h1>
+        <div class="content">
+            <p>项目基本环境: 前端使用Vue, 后端使用SpingBoot + Maven管理, 服务器端使用Nginx代理</p>
+<h3 id="项目打包"><a href="#项目打包" class="headerlink" title="项目打包"></a>项目打包</h3><ol>
+<li><p>后端用的Ide开发工具, 在ide右侧Maven Projects工具栏中打开maven管理, 先执行 <code>clean</code>, 然后执行 <code>package</code>, 完成打包, 打包完成的文件(一个zip包)在target文件下.</p>
+</li>
+<li><p>Vue项目打包, 执行 <code>npm run build</code> 即可完成项目的打包工作, 打包后的文件在dist文件里面, 将其压缩成.zip文件备用. 注意打包前需修改 <code>build/utils.js</code> 文件中 <code>publicPath: &#39;../../</code> 和 <code>config/index.js</code> 文件中的<code>assetsPublicPath: &#39;./&#39;</code>, 不然打包后相关资源路径可能找不到.</p>
+</li>
+</ol>
+<a id="more"></a>
+
+<h4 id="服务器端"><a href="#服务器端" class="headerlink" title="服务器端"></a>服务器端</h4><h4 id="Nginx安装配置"><a href="#Nginx安装配置" class="headerlink" title="Nginx安装配置"></a>Nginx安装配置</h4><ol>
+<li><p>先去<a href="http://nginx.org/en/download.html" target="_blank" rel="noopener">Nginx官网</a>下载适合自己系统的版本, 本文以Win10为例, 下载完成后将文件解压放在 <code>D:\nginx-1.16.1</code>(自由发挥)</p>
+</li>
+<li><p>Nginx文件路径基本信息: 我们打包后的前端文件直接放在 <code>html</code> 这个文件夹中, <code>conf</code> 是Nginx的相关配置文件夹, <code>logs</code> 是Nginx相关日志记录文件夹,  </p>
+</li>
+<li><p>Nginx默认是80端口, 可能出现80端口被占用的情况, 我们这里选择一个最简单的方法, 不使用80端口, 修改Nginx配置文件, 在 <code>D:\nginx-1.16.1\conf\nginx.conf</code>, </p>
+<figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">  listen       81;</span><br><span class="line">  listen       [::]:81 default_server;</span><br><span class="line">  # 代理的后端请求接口</span><br><span class="line">  server_name  127.0.0.1:9090;</span><br><span class="line">  # 文件上传最大值</span><br><span class="line">  client_max_body_size 70M;</span><br><span class="line">  # 页面文件夹</span><br><span class="line">  location / &#123;</span><br><span class="line">      root   html;</span><br><span class="line">      index  index.html index.htm;</span><br><span class="line">  &#125;</span><br><span class="line">  # 把 /api 路径下的请求转发给真正的后端服务器</span><br><span class="line">  location /api &#123;</span><br><span class="line">    # 把 /api 路径下的请求转发给真正的后端服务器</span><br><span class="line">    proxy_pass http://127.0.0.1:9090;</span><br><span class="line"></span><br><span class="line">    # 获取用户真实IP, 把host头传过去，后端服务程序将收到your.domain.name, 否则收到的是localhost:81</span><br><span class="line">    proxy_set_header Host $http_host;</span><br><span class="line">    proxy_set_header X-Real-IP $remote_addr;						</span><br><span class="line">    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line"></span><br><span class="line">    # 把cookie中的path部分从/api替换成/</span><br><span class="line">    proxy_cookie_path /api /;</span><br><span class="line">    # 把cookie的path部分从localhost:81替换成your.domain.name</span><br><span class="line">    proxy_cookie_domain localhost:81 http://127.0.0.1:9090;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  #error_page  404              /404.html;</span><br><span class="line"></span><br><span class="line">  # redirect server error pages to the static page /50x.html</span><br><span class="line">  #</span><br><span class="line">  error_page   500 502 503 504  /50x.html;</span><br><span class="line">  location = /50x.html &#123;</span><br><span class="line">      root   html;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动Nginx: 直接运行 <code>Nginx.exe</code> 文件, 停止服务: <code>nginx -s stop</code></p>
+</li>
+</ol>
+<h4 id="启动运行后台"><a href="#启动运行后台" class="headerlink" title="启动运行后台"></a>启动运行后台</h4><ol>
+<li>找到打包后的后台项目文件解压, 会有一个.jar文件和一个application.properties文件, 以默认配置运行 <code>java -jar youServerFile.jar</code>, 以自定义配置文件(application.properties)运行 <code>java -jar -Dspring.config.location=%cd%\application.properties -Dlogging.path=%cd%\log %cd%\youServerFile.jar</code></li>
+</ol>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/服务器/">服务器</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<div class="notification is-danger">
+    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/07/02/AndroidStudio SQLite快捷调试/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Android Studio SQLite快捷调试</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/09/02/Cordova+Vue基础环境搭建/">
+                <span class="level-item">Cordvoa+Vue基础环境搭建</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+<!-- <aside id="article-toc" role="navigation" class="fixed">
+  <div id="article-toc-inner">
+      <strong class="sidebar-title">序：</strong>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#项目打包"><span class="toc-text">项目打包</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#服务器端"><span class="toc-text">服务器端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Nginx安装配置"><span class="toc-text">Nginx安装配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#启动运行后台"><span class="toc-text">启动运行后台</span></a></li></ol></li></ol>
+  </div>
+</aside> -->
+
+</div>
+                
+            </div>
+        </div>
+    </section>
+ 
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/" rel="external nofollow">
+                    
+                    <img src="/images/logo.svg" alt="前后端项目分离-服务器端部署" height="28">
+                    
+                </a>
+                <p class="is-size-7">
+                    &copy; 2020 ctrlands&nbsp;
+                    Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                    
+                </p>
+            </div>
+            <div class="level-end">
+                
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                    
+                    
+                    <p class="control">
+                        <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/" rel="external nofollow">
+                            
+                            <i class="fab fa-creative-commons"></i>
+                            
+                        </a>
+                    </p>
+                    
+                    <p class="control">
+                        <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/" rel="external nofollow">
+                            
+                            <i class="fab fa-creative-commons-by"></i>
+                            
+                        </a>
+                    </p>
+                    
+                    <p class="control">
+                        <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus" rel="external nofollow">
+                            
+                            <i class="fab fa-github"></i>
+                            
+                        </a>
+                    </p>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
