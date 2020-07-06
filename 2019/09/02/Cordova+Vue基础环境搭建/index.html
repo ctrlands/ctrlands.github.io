@@ -17,7 +17,7 @@
 <meta property="og:description" content="安装Cordova1npm i -g cordova  这里不建议使用cnpm方式安装, 今天通过cnpm安装初始化项目的时候总是失败. 初始化Cordova项目1cordova create projectFileName packageName appName  for more info: 官方文档">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://ctrlands.com/images/og_image.png">
-<meta property="og:updated_time" content="2020-07-03T01:33:51.224Z">
+<meta property="og:updated_time" content="2020-07-03T03:50:30.438Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cordvoa+Vue基础环境搭建">
 <meta name="twitter:description" content="安装Cordova1npm i -g cordova  这里不建议使用cnpm方式安装, 今天通过cnpm安装初始化项目的时候总是失败. 初始化Cordova项目1cordova create projectFileName packageName appName  for more info: 官方文档">
@@ -85,6 +85,10 @@
     
     
     
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+    
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -103,15 +107,15 @@
             
             <div class="navbar-start">
                 
-                <a class="navbar-item" href="/">Home</a>
+                <a class="navbar-item" href="/">首页-Home</a>
                 
-                <a class="navbar-item" href="/archives">Archives</a>
+                <a class="navbar-item" href="/archives">档案-Archives</a>
                 
-                <a class="navbar-item" href="/categories">Categories</a>
+                <a class="navbar-item" href="/categories">类别-Categories</a>
                 
-                <a class="navbar-item" href="/tags">Tags</a>
+                <a class="navbar-item" href="/tags">标签-Tags</a>
                 
-                <a class="navbar-item" href="/about">About</a>
+                <a class="navbar-item" href="/about">关于-About</a>
                 
             </div>
             
@@ -162,6 +166,11 @@
                     5 分钟 读完 (大约 795 个字)
                 </span>
                 
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
                 
             </div>
         </div>
@@ -246,28 +255,23 @@
         <div class="buttons is-centered">
             
                 
-<div class="notification is-danger">
-    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
-</div>
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/alipay_donate.png" alt="支付宝"></div>
+</a>
 
                 
                 
-<div class="notification is-danger">
-    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
-</div>
-
-                
-                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
-
-<div class="notification is-danger">
-    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
-</div>
-
-                
-                
-<div class="notification is-danger">
-    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
-</div>
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/wechat_donate.png" alt="微信"></div>
+</a>
 
                 
         </div>
@@ -305,6 +309,27 @@
   </li></div>
 </aside> -->
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: 'gB9OoFOvo9FBCjjQQLbTtL4q-gzGzoHsz',
+        app_key: 'Fs5e6rWDLLgXn0s0wtihKkl4',
+        placeholder: '请输入内容'
+    });
+</script>
+
+    </div>
+</div>
 </div>
                 
             </div>
@@ -323,6 +348,14 @@
                 <p class="is-size-7">
                     &copy; 2020 ctrlands&nbsp;
                     Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                    
+                    <br>
+                    <span id="busuanzi_container_site_uv">
+                        共<span id="busuanzi_value_site_uv">0</span>个访客
+                    </span>
+                    <span id="busuanzi_container_site_pv">
+                        共<span id="busuanzi_value_site_pv">0</span>访问量
+                    </span>
                     
                 </p>
             </div>
@@ -454,6 +487,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
     
+    
+
     
 
 
