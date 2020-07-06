@@ -1,5 +1,6 @@
 ---
 title: hexo + github page 搭建
+date: 2019-06-15 14:09:59
 categories: [hexo]
 ---
 安装环境前提：Node + Git
