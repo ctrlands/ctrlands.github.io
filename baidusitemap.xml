@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://ctrlands.com/2020/07/16/centeros8%E5%AE%89%E8%A3%85gitlab/</loc>
+    <lastmod>2020-07-16</lastmod>
+  </url>  <url>
     <loc>http://ctrlands.com/2019/06/15/hexo+githubPage%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2020-07-06</lastmod>
+  </url>  <url>
+    <loc>http://ctrlands.com/2020/07/02/AndroidStudio%20SQLite%E5%BF%AB%E6%8D%B7%E8%B0%83%E8%AF%95/</loc>
+    <lastmod>2020-07-03</lastmod>
   </url>  <url>
     <loc>http://ctrlands.com/2019/06/20/CSS%E8%A7%84%E8%8C%83-BEM/</loc>
     <lastmod>2020-07-03</lastmod>
   </url>  <url>
-    <loc>http://ctrlands.com/2020/07/02/AndroidStudio%20SQLite%E5%BF%AB%E6%8D%B7%E8%B0%83%E8%AF%95/</loc>
+    <loc>http://ctrlands.com/2019/09/02/Cordova+Vue%E5%9F%BA%E7%A1%80%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2020-07-03</lastmod>
   </url>  <url>
     <loc>http://ctrlands.com/2019/06/17/KendoUI%E5%B8%B8%E8%A7%81%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2020-07-03</lastmod>
   </url>  <url>
-    <loc>http://ctrlands.com/2019/09/02/Cordova+Vue%E5%9F%BA%E7%A1%80%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
+    <loc>http://ctrlands.com/2019/07/10/MAML-%E4%BD%BF%E7%94%A8%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF%E7%BB%98%E5%88%B6%E6%B0%B4%E6%B3%A2%E7%BA%B9%E5%85%85%E7%94%B5%E5%8A%A8%E7%94%BB/</loc>
     <lastmod>2020-07-03</lastmod>
   </url>  <url>
     <loc>http://ctrlands.com/2019/06/19/Markdown-Lint/</loc>
@@ -23,9 +29,6 @@
     <lastmod>2020-07-03</lastmod>
   </url>  <url>
     <loc>http://ctrlands.com/2019/07/16/React-Native%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2020-07-03</lastmod>
-  </url>  <url>
-    <loc>http://ctrlands.com/2019/07/10/MAML-%E4%BD%BF%E7%94%A8%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF%E7%BB%98%E5%88%B6%E6%B0%B4%E6%B3%A2%E7%BA%B9%E5%85%85%E7%94%B5%E5%8A%A8%E7%94%BB/</loc>
     <lastmod>2020-07-03</lastmod>
   </url>  <url>
     <loc>http://ctrlands.com/2019/08/30/%E4%BD%BF%E7%94%A8Electron%E5%B0%86Vue%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E4%B8%BA%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8-%E5%9F%BA%E7%A1%80%E7%AF%87/</loc>
