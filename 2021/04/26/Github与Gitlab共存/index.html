@@ -2,25 +2,25 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>使用Electron将Vue项目打包为桌面应用-基础篇 - ctrlands</title>
+<title>Github与Gitlab共存 - ctrlands</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="google-site-verification" content="GBmm3kWsKUc_Gdhd8XuQOn6u83Fn_kF9aEdmI2nPOwA">
 
 
 
-    <meta name="description" content="一天下午, 我正吹着空调, 带着耳机, 愉快的扮演着代码搬运工, 突然我的组长告诉我, 让我把一个vue项目打包成桌面应用. (ps: 啥, vue项目还能打包成桌面应用, 请自行脑补我的黑人脸问号), 后来组长发给我一条消息: Electron+Vue. 抱着try yi try的态度, 打开了搜索引擎, 跟着相关文档step by step, 哎哟, 不错哦, 还真阔以, 牛beer. 运行一">
-<meta name="keywords" content="Electron">
+    <meta name="description" content="Git配置多个SSH Key 首先清除git的全局用户信息  123git config --global --unset user.name &apos;your name&apos;git config --global --unset user.email &apos;your email&apos;">
+<meta name="keywords" content="Dev">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用Electron将Vue项目打包为桌面应用-基础篇">
-<meta property="og:url" content="http://ctrlands.com/2019/08/30/使用Electron将Vue项目打包为桌面应用-基础篇/index.html">
+<meta property="og:title" content="Github与Gitlab共存">
+<meta property="og:url" content="http://ctrlands.com/2021/04/26/Github与Gitlab共存/index.html">
 <meta property="og:site_name" content="ctrlands">
-<meta property="og:description" content="一天下午, 我正吹着空调, 带着耳机, 愉快的扮演着代码搬运工, 突然我的组长告诉我, 让我把一个vue项目打包成桌面应用. (ps: 啥, vue项目还能打包成桌面应用, 请自行脑补我的黑人脸问号), 后来组长发给我一条消息: Electron+Vue. 抱着try yi try的态度, 打开了搜索引擎, 跟着相关文档step by step, 哎哟, 不错哦, 还真阔以, 牛beer. 运行一">
+<meta property="og:description" content="Git配置多个SSH Key 首先清除git的全局用户信息  123git config --global --unset user.name &apos;your name&apos;git config --global --unset user.email &apos;your email&apos;">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://ctrlands.com/images/og_image.png">
-<meta property="og:updated_time" content="2020-07-03T03:50:30.438Z">
+<meta property="og:updated_time" content="2021-04-26T07:30:26.084Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用Electron将Vue项目打包为桌面应用-基础篇">
-<meta name="twitter:description" content="一天下午, 我正吹着空调, 带着耳机, 愉快的扮演着代码搬运工, 突然我的组长告诉我, 让我把一个vue项目打包成桌面应用. (ps: 啥, vue项目还能打包成桌面应用, 请自行脑补我的黑人脸问号), 后来组长发给我一条消息: Electron+Vue. 抱着try yi try的态度, 打开了搜索引擎, 跟着相关文档step by step, 哎哟, 不错哦, 还真阔以, 牛beer. 运行一">
+<meta name="twitter:title" content="Github与Gitlab共存">
+<meta name="twitter:description" content="Git配置多个SSH Key 首先清除git的全局用户信息  123git config --global --unset user.name &apos;your name&apos;git config --global --unset user.email &apos;your email&apos;">
 <meta name="twitter:image" content="http://ctrlands.com/images/og_image.png">
 
 
@@ -99,7 +99,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="使用Electron将Vue项目打包为桌面应用-基础篇" height="28">
+                <img src="/images/logo.svg" alt="Github与Gitlab共存" height="28">
             
             </a>
         </div>
@@ -153,17 +153,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-30T08:02:44.000Z">2019-08-30</time>
+                <time class="level-item has-text-grey" datetime="2021-04-26T07:27:41.000Z">2021-04-26</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Vue/">Vue</a>
+                <a class="has-link-grey -link" href="/categories/Dev/">Dev</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    7 分钟 读完 (大约 1068 个字)
+                    3 分钟 读完 (大约 403 个字)
                 </span>
                 
                 
@@ -177,43 +177,57 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                使用Electron将Vue项目打包为桌面应用-基础篇
+                Github与Gitlab共存
             
         </h1>
         <div class="content">
-            <p>一天下午, 我正吹着空调, 带着耳机, 愉快的扮演着代码搬运工, 突然我的组长告诉我, 让我把一个vue项目打包成桌面应用. (ps: 啥, vue项目还能打包成桌面应用, 请自行脑补我的黑人脸问号), 后来组长发给我一条消息: Electron+Vue. 抱着try yi try的态度, 打开了搜索引擎, 跟着相关文档step by step, 哎哟, 不错哦, 还真阔以, 牛beer. 运行一看, 居然还阔以f12, 再一看, 不就是那二锅头兑的那白开水嘛, 不好意思, 拿错剧本了, 不就是一个桌面应用的壳子套个浏览器嘛. 不过还是牛beer. 本着技多不压身(实之吾恐忘之), 特此以文档记之.</p>
+            <h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="配置多个SSH-Key"><a href="#配置多个SSH-Key" class="headerlink" title="配置多个SSH Key"></a>配置多个SSH Key</h3><ol>
+<li>首先清除git的全局用户信息</li>
+</ol>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global --<span class="hljs-built_in">unset</span> user.name <span class="hljs-string">'your name'</span></span><br><span class="line"></span><br><span class="line">git config --global --<span class="hljs-built_in">unset</span> user.email <span class="hljs-string">'your email'</span></span><br></pre></td></tr></table></figure>
+
 <a id="more"></a>
 
-<p>使用Electron将Vue项目打包成桌面应用有两种方式(就目前而言, 我就只知道这两种2333), 一种是将vue项目打包扔进Electron项目中, 另外一种就是在Vue项目引入Electron, 然后在Vue中打包为桌面应用. 话不多说, 开整.</p>
-<p>本文以第二种方式为例:</p>
-<h3 id="先创建一个Electron-Vue项目"><a href="#先创建一个Electron-Vue项目" class="headerlink" title="先创建一个Electron-Vue项目"></a>先创建一个Electron-Vue项目</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init simulatedgreg/electron-vue yourprojectname</span><br></pre></td></tr></table></figure>
-
-<p>Electron-Vue模板为我们封装好了相关Electron配置, 拿来即用. 然后根据自己需求选择配置, 打包方式我选的’builder’. 模板下载完成后, 进入文件, 下载相关依赖包. </p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install</span><br></pre></td></tr></table></figure>
-
-<p><font color="#f03326">(重要: 不要使用npm, 使用cnpm, 原因: npm: 下载速度=树懒的速度, cnpm: 比npm的速度稍微快一点)</font>.因为一些Electron的相关依赖包在墙外, 使用npm有很大几率会下载失败, 当时我不知道, 使用的npm, 结果把我卡在这儿了, 这也下载失败, 那也下载失败, 忍不住想大吼一句ZnVjaw==相关依赖下载完成后, 运行</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
-
-<p>就可以看到界面了. 大概就是下图的样子<br><img src="/images/Electron/index.png" alt="首页"><br><br>下方就是浏览器中的控制台.</p>
-<h3 id="打包Vue项目为桌面应用"><a href="#打包Vue项目为桌面应用" class="headerlink" title="打包Vue项目为桌面应用"></a>打包Vue项目为桌面应用</h3><p>打包命令为:</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
-
-<p>执行命令后, 然后就会下载相关Electron的相关依赖包进行打包, 然而就在下载相关依赖包的时候问题就接踵而至了, 由于不可抗力因素原因, 我们无法通过cnpm方式下载相关依赖包, 所以我们需要手动去下载相关依赖包, 然后放在相关文件夹中. 需要的无法下载的相关依赖包我们可以在执行npm run build的时候看到.<br>需要的相关依赖包可能涉及到(以windows为例, 以你所需的Electron为准):</p>
-<p><code>electron-v2.0.18-win32-x64.zip</code></p>
-<p>可在这里下载<a href="https://npm.taobao.org/mirrors/electron/" target="_blank" rel="noopener">淘宝镜像站</a>, 或在这里下载<a href="https://github.com/electron/electron/releases" target="_blank" rel="noopener">官方git仓库</a><br>放在C:\Users\username\ .electron\electron-v2.0.18-win32-x64.zip(不需解压)<br>同时放在<br>C:\Users\username\AppData\Local\electron\Cache\electron-v2.0.18-win32-x64.zip(不需解压)</p>
-<p>所需文件</p>
-<p><code>nsis-3.0.3.2.7z nsis-resources-3.3.0.7z winCodeSign-2.4.0.7z app-builder-v0.6.1-x64.7z(可能需要)</code></p>
-<p>主路径: </p>
-<p><code>C:\Users\username\AppData\Local\electron-builder\Cache\</code></p>
-<p>C:\Users\username\AppData\Local\electron-builder\Cache\nsis\nsis-3.0.3.2.7z(需解压)<br>C:\Users\username\AppData\Local\electron-builder\Cache\nsis\nsis-resources-3.3.0.7z(需解压)<br>C:\Users\username\AppData\Local\electron-builder\Cache\winCodeSign\winCodeSign-2.4.0.7z(需解压)<br>C:\Users\username\AppData\Local\electron-builder\Cache\app-builder\app-builder-v0.6.1-x64.7z(可能需要, 需解压)</p>
-<p>文件结构如下:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">electron</span><br><span class="line">    Cache</span><br><span class="line">        electron-v2.0.18-win32-x64.zip</span><br><span class="line">        SHASUMS256.txt-2.0.18</span><br><span class="line">electron-builder</span><br><span class="line">    cache</span><br><span class="line">        app-builder</span><br><span class="line">            app-builder-v0.6.1-x64</span><br><span class="line">                解压app-builder-v0.6.1-x64.7z所得文件</span><br><span class="line">        nsis</span><br><span class="line">            nsis-3.0.3.2</span><br><span class="line">                解压nsis-3.0.3.2.7z所得文件</span><br><span class="line">            nsis-resources-3.3.0</span><br><span class="line">                解压nsis-resources-3.3.0.7z所得文件</span><br><span class="line">        winCodeSign</span><br><span class="line">            winCodeSign-2.4.0</span><br><span class="line">                解压winCodeSign-2.4.0.7z所得文件</span><br></pre></td></tr></table></figure>
-
-<p>相关依赖包下载安装完成后, 就等打包, 打包完成后的文件放在项目根目录/dist文件下.<br><img src="/images/Electron/build.png" alt="打包完成的桌面应用文件"><br><br>图中箭头指示的就是打包完成的桌面应用文件.</p>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ol>
-<li>跨域问题<br>修改 <code>yourprojectname/.electron-vue/dev-runner.js</code>, 添加一下内容:</li>
+<ol start="2">
+<li>生成新的 SSH key</li>
 </ol>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const httpProxyMiddleware = require(<span class="hljs-string">'http-proxy-middleware'</span>)</span><br><span class="line"><span class="hljs-keyword">function</span> <span class="hljs-function"><span class="hljs-title">startRenderer</span></span> () &#123;</span><br><span class="line">    <span class="hljs-built_in">return</span> new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">        <span class="hljs-comment"># target为跨域的访问接口地址, eg: 后台接口为: http://localhost:8999/getuser, 在vue中我们使用/getuser即可</span></span><br><span class="line">        server.use(httpProxyMiddleware(&#123;</span><br><span class="line">            target: <span class="hljs-string">'http://localhost:8999'</span>,</span><br><span class="line">            changeOrigin: <span class="hljs-literal">true</span></span><br><span class="line">        &#125;))</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>gitlab的SSK Key</li>
+</ul>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 在.ssh文件目录下生成一个id_rsa.gitlab文件</span><br><span class="line"></span><br><span class="line">ssh-keygen -t rsa -f ~/.ssh/id_rsa.gitlab -C <span class="hljs-string">"your gitlab email"</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>github的SSH Key</li>
+</ul>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 在.ssh文件目录下生成一个id_rsa.github文件</span><br><span class="line"></span><br><span class="line">ssh-keygen -t rsa -f ~/.ssh/id_rsa.github -C <span class="hljs-string">"your github email"</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>添加可被识别的SSH Key</li>
+</ol>
+<p>默认只读取 id_rsa，为了让 SSH 识别新的私钥，需要将新的私钥加入到到ssh-agent的高速缓存中.</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ssh-agent bash</span><br><span class="line"></span><br><span class="line">ssh-add ~/.ssh/id_rsa.gitlab</span><br><span class="line"></span><br><span class="line">ssh-add ~/.ssh/id_rsa.github</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>添加多账号配置文件</li>
+</ol>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 创建配置文件</span><br><span class="line"></span><br><span class="line">touch ~/.ssh/config</span><br></pre></td></tr></table></figure>
+
+<p>修改配置文件</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># gitlab</span><br><span class="line">Host 10.10.4.1</span><br><span class="line"># gitlab地址</span><br><span class="line">HostName 10.10.4.1</span><br><span class="line">User git</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa_gitlab</span><br><span class="line"># Port *** gitlab端口号</span><br><span class="line"></span><br><span class="line"># github</span><br><span class="line">Host github.com</span><br><span class="line">User git</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa_github</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li><p>在gitlab和github的个人中心设置中添加对应的SSK Key.</p>
+</li>
+<li><p>测试</p>
+</li>
+</ol>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// gitlab 测试 10.10.4.1你的gitlab地址, 连接成功会看到<span class="hljs-string">'Welcome to GitLab, @$&#123;your gitlab name&#125;!'</span></span><br><span class="line">ssh -T git@10.10.4.1</span><br><span class="line">// github 测试 连接成功会看到<span class="hljs-string">'Hi $&#123;your github name&#125;! You'</span>ve successfully authenticated, but GitHub does not provide shell access.</span><br><span class="line">!<span class="hljs-string">'</span></span><br><span class="line"><span class="hljs-string">ssh -T git@github.com</span></span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>设置提交者信息</li>
+</ol>
+<p>由于我们之前把github的全局用户信息给清除了, 所以第一次提交数据时会让你输入用户名, 我们可以在项目中直接设置本项目中你的提交名字</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 在该项目中你的提交者姓名就会变为xxx</span><br><span class="line">ssh git config --<span class="hljs-built_in">local</span> user.name <span class="hljs-string">'xxxx'</span></span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -222,7 +236,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/Electron/">Electron</a>
+                    <a class="has-link-grey -link" href="/tags/Dev/">Dev</a>
                 </div>
             </div>
         </div>
@@ -268,17 +282,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/09/02/Cordova+Vue基础环境搭建/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Cordvoa+Vue基础环境搭建</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/30/浏览器Cookie过期后未被自动删除分析/">
-                <span class="level-item">浏览器Cookie过期后未被自动删除分析</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/07/16/centeros8安装gitlab/">
+                <span class="level-item">centeros8安装gitlab</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -290,7 +297,7 @@
 <!-- <aside id="article-toc" role="navigation" class="fixed">
   <div id="article-toc-inner">
       <strong class="sidebar-title">序：</strong>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#先创建一个Electron-Vue项目"><span class="toc-text">先创建一个Electron-Vue项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#打包Vue项目为桌面应用"><span class="toc-text">打包Vue项目为桌面应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他"><span class="toc-text">其他</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git"><span class="toc-text">Git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置多个SSH-Key"><span class="toc-text">配置多个SSH Key</span></a></li></ol></li></ol>
   </div>
 </aside> -->
 
@@ -327,7 +334,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/" rel="external nofollow">
                     
-                    <img src="/images/logo.svg" alt="使用Electron将Vue项目打包为桌面应用-基础篇" height="28">
+                    <img src="/images/logo.svg" alt="Github与Gitlab共存" height="28">
                     
                 </a>
                 <p class="is-size-7">
